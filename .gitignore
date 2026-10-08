@@ -16,6 +16,10 @@ ENV/
 # Jupyter
 .ipynb_checkpoints/
 
+# Generated notebook assets
+img/
+publish/
+
 # Test and coverage output
 .pytest_cache/
 .coverage
