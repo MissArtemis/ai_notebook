@@ -16,6 +16,9 @@ ENV/
 # Jupyter
 .ipynb_checkpoints/
 
+# Public article snapshots and unfinished sync drafts
+.cache/leetcode-sync/
+
 # Generated notebook assets
 img/
 publish/

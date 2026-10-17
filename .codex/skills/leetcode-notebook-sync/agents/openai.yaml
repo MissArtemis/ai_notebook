@@ -1,0 +1,4 @@
+interface:
+  display_name: "力扣笔记同步"
+  short_description: "增量抓取力扣题解与讨论，保留原代码并整理为精简 Jupyter 笔记"
+  default_prompt: "使用 $leetcode-notebook-sync 同步我的力扣题解和讨论，整理为精简 Jupyter 笔记，校验后提交并推送 GitHub。"

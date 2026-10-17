@@ -1,114 +1,63 @@
 """Validate the curated notebooks; optionally compare public sources and execute cells."""
 
 import argparse
-import hashlib
 import json
 from pathlib import Path
-from urllib.request import Request, urlopen
+
+from leetcode_source import fetch_post, list_posts, require, sha256
 
 
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def sha256(text):
-    return hashlib.sha256(text.encode('utf-8')).hexdigest()
-
-
-def require(condition, message):
-    if not condition:
-        raise ValueError(message)
-
-
-def graphql(query, variables):
-    request = Request('https://leetcode.cn/graphql/',
-                      data=json.dumps({'query': query, 'variables': variables}).encode(),
-                      headers={'Content-Type': 'application/json', 'User-Agent': 'ai-notebook-source-check/1.0'})
-    with urlopen(request, timeout=30) as response:
-        result = json.load(response)
-    require(not result.get('errors'), f"GraphQL: {result.get('errors')}")
-    return result['data']
-
-
-def flatten(node):
-    return node.get('text', '') + ''.join(flatten(child) for child in node.get('children', []))
-
-
-def source_blocks(slate):
-    return [{'language': tab.get('language'), 'code': flatten(tab)}
-            for node in json.loads(slate) if node.get('type') == 'CodeBlock'
-            for tab in node['children']]
-
-
-def check_coverage(manifest):
-    solutions = []
-    while True:
-        result = graphql('query($slug:String!,$skip:Int){solutionArticles(userSlug:$slug,skip:$skip,first:100){pageInfo{hasNextPage} edges{node{slug}}}}',
-                         {'slug': '4bg5t', 'skip': len(solutions)})['solutionArticles']
-        page = [edge['node']['slug'] for edge in result['edges']]
-        require(page or not result['pageInfo']['hasNextPage'], 'Solution pagination made no progress')
-        solutions.extend(page)
-        if not result['pageInfo']['hasNextPage']:
-            break
-    discussions = []
-    token = None
-    seen = set()
-    while True:
-        result = graphql('query($slug:String!,$token:ID){columnsPublishedContents(userSlug:$slug,nextToken:$token){nodes{... on QAQuestionNode{uuid} ... on ColumnArticleNode{uuid}} nextToken}}',
-                         {'slug': '4bg5t', 'token': token})['columnsPublishedContents']
-        discussions.extend(node['uuid'] for node in result['nodes'])
-        token = result['nextToken']
-        if token is None:
-            break
-        require(token not in seen, 'Discussion pagination repeated a token')
-        seen.add(token)
-    for kind, actual in [('solution', solutions), ('discussion', discussions)]:
-        expected = {item['id'] for item in manifest['sources'] if item['kind'] == kind}
-        require(set(actual) == expected, f'{kind} coverage changed: online={set(actual)}, recorded={expected}')
-        count_key = 'solutions' if kind == 'solution' else 'discussions'
+def check_coverage(manifest, user_slug):
+    posts = list_posts(user_slug)
+    for kind, count_key in [('solution', 'solutions'), ('discussion', 'discussions')]:
+        expected = {entry['id'] for entry in manifest['sources'] if entry['kind'] == kind}
+        actual = {post['id'] for post in posts if post['kind'] == kind}
+        require(actual == expected, f'{kind} coverage changed: online={actual}, recorded={expected}')
         require(len(actual) == manifest['coverage'][count_key], f'{kind} count mismatch')
-    print(f'Public coverage: {len(solutions)} solutions, {len(discussions)} discussions; pagination exhausted')
-
-
-def fetch_slate(entry):
-    if entry['kind'] == 'solution':
-        data = graphql('query($slug:String!){solutionArticle(slug:$slug){slateValue author{username}}}',
-                       {'slug': entry['id']})['solutionArticle']
-        require(data['author']['username'] == '4bg5t', f"Unexpected author: {entry['id']}")
-    else:
-        data = graphql('query($uuid:ID!){qaQuestion(uuid:$uuid){slateValue contentAuthor{userSlug}}}',
-                       {'uuid': entry['id']})['qaQuestion']
-        require(data['contentAuthor']['userSlug'] == '4bg5t', f"Unexpected author: {entry['id']}")
-    return data['slateValue']
+    print(f'Public coverage: {len(posts)} posts; pagination exhausted')
+    return {(post['kind'], post['id']): post for post in posts}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--repo', type=Path, default=ROOT)
     parser.add_argument('--online', action='store_true', help='Check all profile pages and compare code with live public posts')
     parser.add_argument('--execute', action='store_true', help='Execute each notebook in a fresh Python kernel; do not save outputs')
     args = parser.parse_args()
     import nbformat
 
-    manifest = json.loads((ROOT / 'leetcode/sources.json').read_text(encoding='utf-8'))
-    if args.online:
-        check_coverage(manifest)
+    root = args.repo.resolve()
+    manifest = json.loads((root / 'leetcode/sources.json').read_text(encoding='utf-8'))
+    config = json.loads((root / 'leetcode/sync_config.json').read_text(encoding='utf-8'))
+    posts = check_coverage(manifest, config['user_slug']) if args.online else {}
     total = 0
     executed = 0
     for entry in manifest['sources']:
-        path = ROOT / entry['notebook']
+        path = (root / entry['notebook']).resolve()
+        require(path.is_relative_to((root / 'leetcode').resolve()), 'Notebook path leaves leetcode/')
         notebook = nbformat.read(path, as_version=4)
         nbformat.validate(notebook)
         require(notebook.metadata.leetcode.source_id == entry['id'], f'{path}: source mismatch')
         cells = {cell.id: cell for cell in notebook.cells}
         require(len(cells) == len(notebook.cells), f'{path}: duplicate cell ids')
-        online = source_blocks(fetch_slate(entry)) if args.online else None
+        live = fetch_post(posts[(entry['kind'], entry['id'])], config['user_slug']) if args.online else None
+        if live is not None:
+            fingerprint_key = 'source_content_sha256' if entry.get('source_content_sha256') else 'source_slate_sha256'
+            require(entry.get(fingerprint_key) == live[fingerprint_key] and entry['title'] == live['title'],
+                    f'{path}: article content changed; fetch and review it before publishing')
+        online = live['blocks'] if live else None
         tracked_cells = set()
         for block in entry['blocks']:
             cell = cells[block['cell_id']]
             tracked_cells.add(cell.id)
             text = cell.source
             if block['presentation'] == 'excerpt':
-                require(text.startswith('```python\n') and text.endswith('\n```'), f'{path}: malformed excerpt')
-                text = text[len('```python\n'):-len('\n```')]
+                prefix = '```' + block.get('fence_language', 'python') + '\n'
+                require(text.startswith(prefix) and text.endswith('\n```'), f'{path}: malformed excerpt')
+                text = text[len(prefix):-len('\n```')]
             else:
                 require(cell.cell_type == 'code', f'{path}: expected code cell')
                 compile(text, str(path), 'exec')

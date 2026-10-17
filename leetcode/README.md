@@ -42,3 +42,7 @@ python leetcode/tools/verify_notebooks.py --online --execute
 [sources.json](sources.json) 保存来源链接、代码块位置与摘要，不复制冗长原文。原文中被省略的重复局部代码和文字示意也逐块登记，方便审计。
 
 仓库原有的 `.py` 练习和 `note/` 历史材料保留；本次整理以以上 9 本 Notebook 为入口。
+
+## 再次同步
+
+使用 `$leetcode-notebook-sync`，或参照[任务说明与脚本用法](SYNC_TASK.md)。skill 的版本控制源位于 [.codex/skills/leetcode-notebook-sync](../.codex/skills/leetcode-notebook-sync/SKILL.md)；本机安装与绑定命令为 `python leetcode/tools/install_sync_skill.py`。

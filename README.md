@@ -8,7 +8,7 @@ A personal knowledge base for organizing notes, explanations, and practical exer
 - Large language models — notes and related resources
 - Machine learning — concepts and notes
 - Statistics — mathematical foundations
-- [`leetcode/`](./leetcode/README.md) — concise Jupyter notes covering all 7 public solutions and 2 discussions from [my LeetCode profile](https://leetcode.cn/u/4bg5t/) as of 2026-10-17
+- [`leetcode/`](./leetcode/README.md) — concise Jupyter notes synced from [my LeetCode profile](https://leetcode.cn/u/4bg5t/); see the index for current coverage and the [reusable sync workflow](./leetcode/SYNC_TASK.md)
 
 ## Working with the repository
 
