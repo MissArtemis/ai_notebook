@@ -8,14 +8,20 @@ A personal knowledge base for organizing notes, explanations, and practical exer
 - Large language models — notes and related resources
 - Machine learning — concepts and notes
 - Statistics — mathematical foundations
-- [`leetcode/`](./leetcode/) — algorithm practice; daily challenges are in [`leetcode/daily_challenge/`](./leetcode/daily_challenge/)
+- [`leetcode/`](./leetcode/README.md) — concise Jupyter notes covering all 7 public solutions and 2 discussions from [my LeetCode profile](https://leetcode.cn/u/4bg5t/) as of 2026-10-17
 
 ## Working with the repository
 
-Add notes and examples to the folder that best matches the topic. Keep filenames descriptive so that individual subjects are easy to find. Python challenge solutions can be run with Python 3.9 or later, for example:
+Add notes and examples to the folder that best matches the topic. Keep filenames descriptive so that individual subjects are easy to find. Open the algorithm notebooks with JupyterLab:
 
 ```bash
-python3 leetcode/daily_challenge/no921.py
+jupyter lab
+```
+
+To validate source-code fidelity and execute all curated LeetCode notebooks in fresh kernels:
+
+```bash
+python leetcode/tools/verify_notebooks.py --online --execute
 ```
 
 This repository is maintained as a personal learning resource. Content may be incomplete or updated as understanding develops.
