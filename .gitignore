@@ -20,6 +20,9 @@ ENV/
 img/
 publish/
 
+# Local notes and material-production files
+leetcode/note/
+
 # Test and coverage output
 .pytest_cache/
 .coverage
