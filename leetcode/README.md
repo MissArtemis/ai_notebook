@@ -24,6 +24,12 @@
 | [第 523 场周赛](contests/weekly_523.ipynb) | [原文](https://leetcode.cn/discuss/post/sLnQAI/) |
 | [第 193 场双周赛](contests/biweekly_193.ipynb) | [原文](https://leetcode.cn/discuss/post/JelbXH/) |
 
+## 本地周赛复盘
+
+| 比赛 | 题解 | 代码 |
+| --- | --- | --- |
+| 第 524 场周赛 | [异或负责吓人，颜色负责认爹，区间负责让我加班](contests/weekly_524_solution.md) | [weekly_524.ipynb](contests/weekly_524.ipynb) |
+
 ## 复用与校验
 
 [任务说明与复用流程](SYNC_TASK.md) · [来源清单](sources.json)
