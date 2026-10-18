@@ -4,10 +4,38 @@ import argparse
 import json
 from pathlib import Path
 
-from leetcode_source import fetch_post, list_posts, require, sha256
+from leetcode_source import fetch_contest_submissions, fetch_post, list_posts, require, sha256
 
 
 ROOT = Path(__file__).resolve().parents[2]
+
+
+def check_submissions(entry, cells, user_slug, online=False):
+    records = entry.get('submissions', [])
+    require(bool(records) == bool(entry.get('contest_slug')), 'Contest source and submission inventory must both be present')
+    live = fetch_contest_submissions(entry['contest_slug'], user_slug) if records and online else None
+    originals = {s['detail']['id']: s for s in live['submissions']} if live else {}
+    if live:
+        require({s['submission_id'] for s in records} == set(originals), 'Incomplete accepted contest submissions')
+    tracked = set()
+    for record in records:
+        cell = cells[record['cell_id']]
+        require(cell.id not in tracked and cell.cell_type == 'code', 'Repeated or non-code submission cell')
+        tracked.add(cell.id)
+        require(record['user_slug'] == user_slug and record['contest_slug'] == entry['contest_slug'], 'Submission owner mismatch')
+        require(record['status'] == 10 and record['language'] == 'python3', 'Expected accepted Python submission')
+        compile(cell.source, str(record['submission_id']), 'exec')
+        require(sha256(cell.source) == record['sha256'], 'Changed original submission code')
+        require(dict(cell.metadata.get('leetcode_submission', {})) == {k: v for k, v in record.items() if k != 'cell_id'},
+                'Submission metadata mismatch')
+        if live:
+            original = originals[record['submission_id']]
+            require(original['detail']['code'] == cell.source
+                    and original['record']['id'] == record['contest_submission_id']
+                    and original['question']['question_id'] == record['question_id']
+                    and original['question']['title_slug'] == record['question_slug']
+                    and original['record']['date'] == record['submitted_at'], 'Live contest submission differs')
+    return tracked
 
 
 def check_coverage(manifest, user_slug):
@@ -34,6 +62,7 @@ def main():
     config = json.loads((root / 'leetcode/sync_config.json').read_text(encoding='utf-8'))
     posts = check_coverage(manifest, config['user_slug']) if args.online else {}
     total = 0
+    submission_total = 0
     executed = 0
     for entry in manifest['sources']:
         path = (root / entry['notebook']).resolve()
@@ -49,7 +78,8 @@ def main():
             require(entry.get(fingerprint_key) == live[fingerprint_key] and entry['title'] == live['title'],
                     f'{path}: article content changed; fetch and review it before publishing')
         online = live['blocks'] if live else None
-        tracked_cells = set()
+        tracked_cells = check_submissions(entry, cells, config['user_slug'], args.online)
+        submission_total += len(tracked_cells)
         for block in entry['blocks']:
             cell = cells[block['cell_id']]
             tracked_cells.add(cell.id)
@@ -86,8 +116,8 @@ def main():
             NotebookClient(notebook, timeout=60, kernel_name='python3',
                            resources={'metadata': {'path': str(path.parent)}}).execute()
             executed += 1
-        print(f'OK {entry["notebook"]}: {len(entry["blocks"])} original blocks')
-    print(f'Validated {len(manifest["sources"])} notebooks, {total} exact source blocks; executed {executed} notebooks')
+        print(f'OK {entry["notebook"]}: {len(entry["blocks"])} article blocks, {len(entry.get("submissions", []))} submissions')
+    print(f'Validated {len(manifest["sources"])} notebooks, {total} exact article blocks, {submission_total} exact submissions; executed {executed} notebooks')
 
 
 if __name__ == '__main__':

@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 import re
 
-from leetcode_source import fetch_post, list_posts, reading_text, require, sha256
+from leetcode_source import fetch_contest_submissions, fetch_post, list_posts, reading_text, require, sha256
 
 
 DEFAULT_ROOT = Path(__file__).resolve().parents[2]
@@ -54,10 +54,15 @@ def compare(snapshot, manifest):
 
 def fetch(root, cache):
     config = load(root / 'leetcode/sync_config.json')
+    manifest = load(root / 'leetcode/sources.json') if (root / 'leetcode/sources.json').exists() else {'sources': []}
     posts = [fetch_post(post, config['user_slug']) for post in list_posts(config['user_slug'])]
+    previous = {identity(entry): entry for entry in manifest['sources']}
+    for post in posts:
+        contest_slug = previous.get(identity(post), {}).get('contest_slug')
+        if contest_slug:
+            post['contest'] = fetch_contest_submissions(contest_slug, config['user_slug'])
     snapshot = {'profile': config['profile'], 'user_slug': config['user_slug'],
                 'fetched_at': datetime.now(timezone(timedelta(hours=8))).isoformat(timespec='seconds'), 'posts': posts}
-    manifest = load(root / 'leetcode/sources.json') if (root / 'leetcode/sources.json').exists() else {'sources': []}
     plan = compare(snapshot, manifest)
     write(cache / 'snapshot.json', snapshot)
     write(cache / 'plan.json', plan)
@@ -78,9 +83,10 @@ def fetch(root, cache):
 
 
 def make_notebook(post, spec, fetched_at):
-    require(spec.get('title') and spec.get('summary') and spec.get('cells'), f"Write concise notes before building {post['id']}")
+    require(spec.get('title') and spec.get('cells'), f"Review the code before building {post['id']}")
     cells = []
     retained = []
+    submissions = []
     used = set()
 
     def cell(kind, text, metadata=None):
@@ -90,7 +96,7 @@ def make_notebook(post, spec, fetched_at):
         cells.append(item)
         return item['id']
 
-    intro = f"# {spec['title']}\n\n{spec['summary']}\n\n[原文]({post['url']}) · 整理于 {fetched_at[:10]}。原代码保持原样；补充注释另放单元格。"
+    intro = f"# {spec['title']}\n\n[原文]({post['url']})"
     cell('markdown', intro)
     for item in spec['cells']:
         kind = item['type']
@@ -101,6 +107,24 @@ def make_notebook(post, spec, fetched_at):
         elif kind == 'example':
             compile(item['text'], post['id'] + ':example', 'exec')
             cell('code', item['text'], {'role': 'example'})
+        elif kind == 'submission':
+            contest = post['contest']
+            original = next((s for s in contest['submissions']
+                             if s['detail']['id'] == item['id']), None)
+            require(original is not None, f"Submission absent from this user's contest ranking: {item['id']}")
+            require(item['id'] not in {s['submission_id'] for s in submissions}, 'Repeated submission')
+            detail, record, question = original['detail'], original['record'], original['question']
+            require(detail['lang'] == 'python3', 'Only Python contest code is supported')
+            code = detail['code']
+            compile(code, str(detail['id']), 'exec')
+            provenance = {'submission_id': detail['id'], 'contest_submission_id': record['id'],
+                          'contest_slug': contest['slug'], 'user_slug': contest['user_slug'],
+                          'question_id': question['question_id'], 'question_slug': question['title_slug'],
+                          'title': question['title'], 'language': detail['lang'], 'status': record['status'],
+                          'submitted_at': record['date'], 'sha256': sha256(code),
+                          'url': f"https://leetcode.cn/submissions/detail/{detail['id']}/"}
+            cid = cell('code', code, {'leetcode_submission': provenance})
+            submissions.append({**provenance, 'cell_id': cid})
         elif kind == 'source':
             index = item['block']
             require(isinstance(index, int) and 0 <= index < len(post['blocks']) and index not in used, f'Invalid/repeated block: {index}')
@@ -131,12 +155,17 @@ def make_notebook(post, spec, fetched_at):
         block = post['blocks'][index]
         omitted.append({'index': index, 'language': block['language'], 'sha256': sha256(block['code']), 'reason': item['reason']})
     require(used == set(range(len(post['blocks']))), f"Account for every source block in {post['id']}; missing {set(range(len(post['blocks']))) - used}")
+    if post.get('contest'):
+        require({s['submission_id'] for s in submissions} == {s['detail']['id'] for s in post['contest']['submissions']},
+                'Retain every accepted contest submission')
     notebook = {'cells': cells, 'metadata': {'kernelspec': {'display_name': 'Python 3', 'language': 'python', 'name': 'python3'},
                 'language_info': {'name': 'python'}, 'leetcode': {'source_id': post['id'], 'url': post['url'], 'fetched_at': fetched_at[:10]}},
                 'nbformat': 4, 'nbformat_minor': 5}
-    entry = {'id': post['id'], 'kind': post['kind'], 'title': post['title'], 'note_title': spec['title'], 'summary': spec['summary'],
+    entry = {'id': post['id'], 'kind': post['kind'], 'title': post['title'], 'note_title': spec['title'], 'summary': spec.get('summary', ''),
              'url': post['url'], 'notebook': spec['notebook'], 'source_slate_sha256': post['source_slate_sha256'],
              'source_content_sha256': post['source_content_sha256'], 'blocks': retained, 'omitted_blocks': omitted}
+    if submissions:
+        entry.update(contest_slug=post['contest']['slug'], submissions=submissions)
     return notebook, entry
 
 
@@ -173,6 +202,8 @@ def build(root, cache, curation_path):
             require(not path.exists(), f'Do not overwrite an unrelated file: {path}')
         require(all(out[0] != path for out in outputs), 'Two curated entries use the same path')
         book, entry = make_notebook(posts[key], item, snapshot['fetched_at'])
+        if previous.get(key, {}).get('contest_slug'):
+            require(entry.get('contest_slug') == previous[key]['contest_slug'], 'Preserve the recorded contest submission source')
         nbformat.validate(nbformat.from_dict(book))
         outputs.append((path, book))
         previous[key] = entry
@@ -195,7 +226,7 @@ def render_index(root, manifest=None):
     def escaped(text):
         return text.replace('|', '\\|').replace('\n', ' ')
     lines = ['# 力扣笔记', '', f"整理自 [公开主页]({manifest['profile']})，最近内容同步：**{manifest['fetched_at'][:10]}**。",
-             '', '原代码逐字保留；简短说明与新增注释放在独立单元格。局部片段、错误版本和未完成占位会单独标明。', '']
+             '', '原代码逐字保留，只加少量独立注释。比赛代码来自本人排行榜中的通过提交；片段与占位简短标明。', '']
     for kind, title in [('solution', '题解'), ('discussion', '讨论')]:
         selected = [e for e in manifest['sources'] if e['kind'] == kind]
         lines.extend(['## ' + title + f'（{len(selected)} 篇）', '', '| 笔记 | 来源 |', '| --- | --- |'])

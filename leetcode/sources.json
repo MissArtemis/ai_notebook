@@ -1,8 +1,8 @@
 {
   "profile": "https://leetcode.cn/u/4bg5t/",
-  "fetched_at": "2026-10-17",
+  "fetched_at": "2026-10-18",
   "coverage": {
-    "solutions": 7,
+    "solutions": 8,
     "discussions": 2,
     "solutions_has_next_page": false,
     "discussions_next_token": null
@@ -12,9 +12,12 @@
       "id": "301-shan-chu-wu-xiao-de-gua-hao-bfs-zui-hsh84",
       "kind": "solution",
       "title": "301. 删除无效的括号｜BFS 最小删除 + 两个容易踩的坑",
+      "note_title": "301. 删除无效的括号",
+      "summary": "",
       "url": "https://leetcode.cn/problems/remove-invalid-parentheses/solution/301-shan-chu-wu-xiao-de-gua-hao-bfs-zui-hsh84/",
       "notebook": "leetcode/daily_challenge/no301.ipynb",
       "source_slate_sha256": "882e4eb20386efdb6008b7d991ce19d2eb7297865ad3dee42c9a36477427872b",
+      "source_content_sha256": "8969b0fbc2473cc61155ce3eb0b23d3eac04bd6fe8b82f028f20bd053ac299ca",
       "blocks": [
         {
           "index": 0,
@@ -29,391 +32,391 @@
           "index": 1,
           "language": "plainText",
           "sha256": "b4fa9a80da266dbf774270714240884b905c765dc3aa8249accddbbb60c2b629",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 2,
           "language": "plainText",
           "sha256": "ce0cf17d095db74e3ca04e383a97147223d62226b49c4b6e6929f0d5a7f5a572",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 3,
           "language": "python",
           "sha256": "1bf3ebfc408115802075c482f3385044110d0614a4cd2679e5f920211f606643",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 4,
           "language": "plainText",
           "sha256": "32ebb1abcc1c601ceb9c4e3c4faba0caa5b85bb98c4f1e6612c40faa528a91c9",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 5,
           "language": "python",
           "sha256": "4b7770a0c3f3c6261ebb434bc255b1ed53448142c09840d9ccffee6c8c0c6d74",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 6,
           "language": "plainText",
           "sha256": "ba5ec51d07a4ac0e951608704431d59a02b21a4e951acc10505a8dc407c501ee",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 7,
           "language": "python3",
           "sha256": "4c485c632db7e92c926c9a9a8983f125645b8cca56574f71da19eff047b95705",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 8,
           "language": "plainText",
           "sha256": "d3d1ee29225f725359abf5aa4b007a31eb01b7cf8fefa3286a7019c4de1cc3d9",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 9,
           "language": "python",
           "sha256": "55107ade332b42226d1c816159c517b7d94f684b5d8ca56f88744636ea1c1370",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 10,
           "language": "python",
           "sha256": "51b60edb206e7c1156025c9a14a1e953d0742863229c7386f7ed10c769ba826a",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 11,
           "language": "plainText",
           "sha256": "2c41e4f626b1cffd05be0517cc5c42c7296493f52c80b7f2290293587e58e834",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 12,
           "language": "plainText",
           "sha256": "e4e98b0300a5ae6cd3adad8255ac78a584f48b38e29404d5a23ac7833c45b696",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 13,
           "language": "plainText",
           "sha256": "b75cf05d6d2aa22cbde9f59628a7cc6a5d70c52517333ed827bca8a397471084",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 14,
           "language": "plainText",
           "sha256": "cac54103b222e47a183af2ef415edea77b61775ce638fcb8d5e768c8c5e91470",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 15,
           "language": "plainText",
           "sha256": "29cc4eb6673b99798e951e9628bd33f356f4dd56f9dd49a97770cd5db93d7064",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 16,
           "language": "plainText",
           "sha256": "6e7395646445fb6082d696add00089753ce968473a11e37a72b85e918937dbb4",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 17,
           "language": "plainText",
           "sha256": "592047d75777d19bd1f6f2a714ae321648d0e962fa34a8a836ebda22f139129c",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 18,
           "language": "plainText",
           "sha256": "e41a3f5b2483b13b615aaf344ff88a50cfcf401f0dd60dee61bbd5240116a1c9",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 19,
           "language": "plainText",
           "sha256": "fe78d632071c76310a99ed6c3d6b0185af30b1b6660749de69d50e38bab3b126",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 20,
           "language": "plainText",
           "sha256": "b75cf05d6d2aa22cbde9f59628a7cc6a5d70c52517333ed827bca8a397471084",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 21,
           "language": "plainText",
           "sha256": "46b0d5c97b148bf4fd36e5bf057357248269ae41071ed25c2e0aabe6d5d6e53b",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 22,
           "language": "plainText",
           "sha256": "e26f819d73fa161573f87da2af50a1133e9be2c7d0f2c9361dda2844ad9e5ea8",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 23,
           "language": "plainText",
           "sha256": "a7de4b8466dc24cdfd30f5adb80cc14516dd2cba257bef745de945a741fbf277",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 24,
           "language": "plainText",
           "sha256": "9f1675b0e5681606f05fd5890bd7cc00dbd255cf14a7eaf8e680e23cef09b6b1",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 25,
           "language": "plainText",
           "sha256": "7357eb77c62d536aac94f49786e8909d23afdd414a1c7227633d8a20d1489ca5",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 26,
           "language": "plainText",
           "sha256": "8fa1e391b8261fcf00457f7df01f0b26f7c89a122f81bce49d3fbf0bab9462bc",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 27,
           "language": "plainText",
           "sha256": "af8b433c173ae78bad44f66b6a6df22caa1e83ed6241c716dc62f4f148b335cc",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 28,
           "language": "python",
           "sha256": "b15207cdd8bef0ccb3eb597e957866e403b0eaa834c360ae6bc099dcda67f8be",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 29,
           "language": "python",
           "sha256": "c690ff2762f04afb15adc312922eb2ba51f46b7bfbf622d8a48d85c4c2b5bf34",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 30,
           "language": "python",
           "sha256": "2d01bd96f87ed79e0880bab7fd921119b78c0670fc75771f65ddc6b2f3e4fb3d",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 31,
           "language": "python",
           "sha256": "b856a0fbda8166d764a56377549b8da8ac3fd3193ac9c5d1860b2a7812506744",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 32,
           "language": "plainText",
           "sha256": "c12e25105839d14c2d5f1b31043b4c4a692439b779f74f8c49e9f1e582c0e8a9",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 33,
           "language": "plainText",
           "sha256": "b856a0fbda8166d764a56377549b8da8ac3fd3193ac9c5d1860b2a7812506744",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 34,
           "language": "plainText",
           "sha256": "6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 35,
           "language": "plainText",
           "sha256": "85f3dd5aad6ea52944a357410b40003ca950241e73c5a48352aeae7c240a57d4",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 36,
           "language": "plainText",
           "sha256": "1494d1205310b50343634f50f5dbfcdaa8c7b912063c447267e794e8b6ed2a2a",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 37,
           "language": "python",
           "sha256": "b856a0fbda8166d764a56377549b8da8ac3fd3193ac9c5d1860b2a7812506744",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 38,
           "language": "plainText",
           "sha256": "9685eb765661ea3b95f31e1bb3c3b5501d0c2acdf353feeaa4d8fe32f95f77fb",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 39,
           "language": "plainText",
           "sha256": "6b787bff35af60591a78ff2d6b131e072bf57cb4bbc21d50206a94ff5df15bcf",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 40,
           "language": "python",
           "sha256": "16b3d1ee8746bd889bf45def5b9c231ae8c9b0c0b87ae0c14eebb19412b16399",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 41,
           "language": "plainText",
           "sha256": "d6364e65343caa63f493b6d84d5d10629d2839379329416aee1f7c9cbcff6ef7",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 42,
           "language": "python",
           "sha256": "0fef2c5d6de57e41fd885c0f996f4df8edf2513987c5cb56eee1a87364b7db40",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 43,
           "language": "python",
           "sha256": "2e6f51b73e08bb65d8a77167fa27a47e407243001beb6db0d4edf5f0da84a9e9",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 44,
           "language": "plainText",
           "sha256": "ceb57a5cda0746078370f29c5af6593e2bed51d8161a0764386349693a28d150",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 45,
           "language": "plainText",
           "sha256": "8bdac31f8e2838a210856e95bff509619c4388658b57dc34a72f04464c7fd258",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 46,
           "language": "python",
           "sha256": "d79ec9d2107b7745160997e10b1703d348ad8d5c7bde4b9a22792238da25244b",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 47,
           "language": "plainText",
           "sha256": "b75cf05d6d2aa22cbde9f59628a7cc6a5d70c52517333ed827bca8a397471084",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 48,
           "language": "plainText",
           "sha256": "da2721fc1e20868f3fae0e443d8c3c89a0dcdbfc7591b11e7c386af9bf87dbec",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 49,
           "language": "plainText",
           "sha256": "2d0f3758ea4fe1b89b17c0d9894762094bb6fa0429cee5d4dc88b0365eb5ad45",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 50,
           "language": "plainText",
           "sha256": "b670cf02f3bfe358f1d47ece62e078bdae466ce8898b23d9754b344cc3a94a7d",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 51,
           "language": "python",
           "sha256": "4664ab248f7e99eb55468ea8266eb0d125d71ca042fdddb878313c7dfeb59109",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 52,
           "language": "python",
           "sha256": "7e6d54bdb31804b3a7d8d715ca7244e042c2100d29780f9a816721b8680755aa",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 53,
           "language": "plainText",
           "sha256": "46b0d5c97b148bf4fd36e5bf057357248269ae41071ed25c2e0aabe6d5d6e53b",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 54,
           "language": "python",
           "sha256": "78bbf6367ba3ae851e5b59f3faff6153ebf49fe22d0a96e8cf90d6ee775b97fc",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 55,
           "language": "python",
           "sha256": "708f48768685eca50fd06d78c3abbdd8914dea50b4d70c34772d92c2060b41f9",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 56,
           "language": "plainText",
           "sha256": "de9e2a5ed8504ad8453f7fa8e4e58b69af1d51b613e8219bd1f32847bd7cf804",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 57,
           "language": "plainText",
           "sha256": "8c237557ea585200882e0bda4a4626e7cfe23199495a2a98a7f39a173a50f4c4",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 58,
           "language": "python",
           "sha256": "0a3f20885b3a9a77c850e5a50935748fe0343f5d2d1fe47e8a1922c6fd4ddc67",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 59,
           "language": "python",
           "sha256": "5bc2a8118b700740bfd032b21c16c0e5e6b929edbad7d8bb671941ebaebc7647",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 60,
           "language": "plainText",
           "sha256": "d813707c1b89e6b051d4c24b4ab0e20ceb093357413a3c9a7913dadd5ef0542a",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 61,
           "language": "plainText",
           "sha256": "a2b1acc52e3a253e0109d0ca189de3dc6d1cd205c0ca09ce93a122f56a0df2d0",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 62,
           "language": "plainText",
           "sha256": "59582f9a3efa33263d24305b63a20246b68c55df4b478e20a2e664ee4dd1fce0",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 63,
           "language": "plainText",
           "sha256": "89fd955610d2b92ab6be4ec2b5e7f587f26d7899917a34b7be46ee2a5a0d8358",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 64,
           "language": "plainText",
           "sha256": "9544522282bd57b55a630246d05031c7f717150f8445d9aee53a412bb0ce7b7f",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 65,
           "language": "plainText",
           "sha256": "e1d96b6ee3b84025d0c74966a6b29e1ab257b19fa2f5e02bee517a1c9e61ba8d",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         }
       ]
     },
@@ -421,9 +424,12 @@
       "id": "cong-num-squarechai-jie-bfsdfshe-dp-by-4-ykk0",
       "kind": "solution",
       "title": "从num-square拆解BFS，DFS和DP",
+      "note_title": "279. 完全平方数：BFS、DFS 与 DP",
+      "summary": "",
       "url": "https://leetcode.cn/problems/perfect-squares/solution/cong-num-squarechai-jie-bfsdfshe-dp-by-4-ykk0/",
       "notebook": "leetcode/daily_challenge/no279.ipynb",
       "source_slate_sha256": "779101d2d454971b6ce0f111101b4790e8523b7132ef4d28708f90d6526e642e",
+      "source_content_sha256": "daddc48810883704f0d409a99b198180eb774e5392ac1e1819936a1fcbea7228",
       "blocks": [
         {
           "index": 5,
@@ -436,43 +442,46 @@
           "index": 9,
           "language": "python",
           "sha256": "fc094c042aadfd6229ebcdbe325caadb8a0cef0d4f36d24450bbe947a2516ec3",
-          "cell_id": "cell-007",
+          "cell_id": "cell-006",
           "presentation": "code"
         },
         {
           "index": 11,
           "language": "python",
           "sha256": "9e886103262955aacfc77d755e974e830dfc3386b11d838f478f2c9db2271f57",
-          "cell_id": "cell-011",
+          "cell_id": "cell-009",
           "presentation": "code"
         },
         {
           "index": 17,
           "language": "python",
           "sha256": "2e6eebcaacad53bf0ffbf2c0fea43a530f5cf0b45ef58b2cb1466813d0a1d4c3",
-          "cell_id": "cell-015",
+          "cell_id": "cell-012",
           "presentation": "code"
         },
         {
           "index": 4,
           "language": "python",
           "sha256": "51f95c8fd9e804c76c29f3b73a8389842866b09b2229f5adcd1b3eebd9c6323d",
-          "cell_id": "cell-019",
-          "presentation": "excerpt"
+          "cell_id": "cell-014",
+          "presentation": "excerpt",
+          "fence_language": "python"
         },
         {
           "index": 8,
           "language": "python",
           "sha256": "79efa9c68430a8a889af5610591b15d800341deea9fe6abdabc12070c4034c48",
-          "cell_id": "cell-021",
-          "presentation": "excerpt"
+          "cell_id": "cell-016",
+          "presentation": "excerpt",
+          "fence_language": "python"
         },
         {
           "index": 16,
           "language": "python",
           "sha256": "f289e3f46fe05837c7259878e7c2c695361a91fa5bb24702a61a412dbc90e0fa",
-          "cell_id": "cell-023",
-          "presentation": "excerpt"
+          "cell_id": "cell-018",
+          "presentation": "excerpt",
+          "fence_language": "python"
         }
       ],
       "omitted_blocks": [
@@ -480,79 +489,79 @@
           "index": 0,
           "language": "plainText",
           "sha256": "747e34e370a52205e361ea6c51f7d3410dea403a4d87b81db87cb1b7931d6107",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 1,
           "language": "plainText",
           "sha256": "cde809eeeed4935c792497a4fd56220e9ef250e76c93eef3aefafa3c38897826",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 2,
           "language": "plainText",
           "sha256": "f3a48a23f40b1c1119dad32111edf82bd534efe31c1212bbd8d73aa53de07c50",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 3,
           "language": "plainText",
           "sha256": "5e595188e9d21e4f6c095bdd2c0996fa7761b7676ce8dd77d88a8eb1acfa1c33",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 6,
           "language": "plainText",
           "sha256": "e9fc5bd15dc2dc2b4978c4dd46ebf06bcfab20c9b8fc00b8b22509fb95f1b5a9",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 7,
           "language": "plainText",
           "sha256": "ac4eb0710d721a3938aef421fe4adad8c7ff0b31615165b2571bbae8e15e8fa3",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 10,
           "language": "plainText",
           "sha256": "1ef9ccc2b7bb80045743c8641acb40e2a9cfb68993aa3fb00fca2fc3ed1c7570",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 12,
           "language": "plainText",
           "sha256": "9ad8ab8d4621be67521a5be4c5f5b76874ffcc919dec743320293952d7fd58c5",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 13,
           "language": "plainText",
           "sha256": "4eef5b7d195a51d1a2841ecc624a4d4442bc9fd9182f7905bc1c9977dd2a1142",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 14,
           "language": "python",
           "sha256": "35cd1ac0d28fcc77de3053d8b77f5f6e1dafa9cbcc65259398ab2ded7a3ecdf6",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 15,
           "language": "python",
           "sha256": "a4d1aaa867c1ce5a592fb41130ce4e29985ea3bc133abf3ed13ced017809c06e",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 18,
           "language": "plainText",
           "sha256": "26565bb65ad86c58815ebed9f58a54c3b4f8f09d0ec7c58e333a3b9cb4694857",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 19,
           "language": "plainText",
           "sha256": "a85ef731e787f30486f2f930fa6101b13ceaae865bbd34feb22a2031880eeff4",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         }
       ]
     },
@@ -560,9 +569,12 @@
       "id": "1021-shan-chu-zui-wai-ceng-de-gua-hao-sh-0p55",
       "kind": "solution",
       "title": "1021. 删除最外层的括号｜深度一趟扫描与切片踩坑复盘（Python）",
+      "note_title": "1021. 删除最外层的括号",
+      "summary": "",
       "url": "https://leetcode.cn/problems/remove-outermost-parentheses/solution/1021-shan-chu-zui-wai-ceng-de-gua-hao-sh-0p55/",
       "notebook": "leetcode/daily_challenge/no1021.ipynb",
       "source_slate_sha256": "4e996f43a5b8db6231f5265ee49dbc9a31ca663b12d3a80cc7c91eb77330652c",
+      "source_content_sha256": "35672485d690a56d759ba173718e288b3426e9fbd7b221aa9b838fb98f7de1fd",
       "blocks": [
         {
           "index": 0,
@@ -575,21 +587,22 @@
           "index": 3,
           "language": "python",
           "sha256": "2a26c178cd29501509daaf184a92b781013a08988deb6e5fbf7bc380ec8bc323",
-          "cell_id": "cell-007",
+          "cell_id": "cell-006",
           "presentation": "code"
         },
         {
           "index": 1,
           "language": "python",
           "sha256": "462bc41e50cc444615a078a8f5e6a511ce9b6beb15a2f546fb17f9f1d13ea758",
-          "cell_id": "cell-010",
-          "presentation": "excerpt"
+          "cell_id": "cell-009",
+          "presentation": "excerpt",
+          "fence_language": "python"
         },
         {
           "index": 4,
           "language": "python",
           "sha256": "93fb91a102706138db5c00927326ad580314decd661f12ec409c60be9c01e3ce",
-          "cell_id": "cell-012",
+          "cell_id": "cell-011",
           "presentation": "code"
         }
       ],
@@ -598,7 +611,7 @@
           "index": 2,
           "language": "plainText",
           "sha256": "7a85b22e49bd310956c5053c0a1b4fb25def373074e834c0a926b87d29cfc5bc",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         }
       ]
     },
@@ -606,9 +619,12 @@
       "id": "1541-ping-heng-gua-hao-zi-fu-chuan-de-zu-i608",
       "kind": "solution",
       "title": "1541. 平衡括号字符串的最少插入次数｜从 1021 深度计数到双右括号贪心（Python）",
+      "note_title": "1541. 平衡括号字符串的最少插入次数",
+      "summary": "",
       "url": "https://leetcode.cn/problems/minimum-insertions-to-balance-a-parentheses-string/solution/1541-ping-heng-gua-hao-zi-fu-chuan-de-zu-i608/",
       "notebook": "leetcode/daily_challenge/1541.ipynb",
       "source_slate_sha256": "38760c0c98105f3bcd78ab146bedb1ff70dfeaf40339908156256362035dd69b",
+      "source_content_sha256": "23a6881abb427899f0a996da17ad659625a9e29c57030f683988bee213e566fc",
       "blocks": [
         {
           "index": 0,
@@ -621,15 +637,16 @@
           "index": 4,
           "language": "python",
           "sha256": "537172a1d8db1fe2a65d32c5fb50daf061d385de35fd3ecd85bc5efccf8091a7",
-          "cell_id": "cell-007",
+          "cell_id": "cell-006",
           "presentation": "code"
         },
         {
           "index": 1,
           "language": "python",
           "sha256": "cf238cf680144396f1a641eaec33c03bce66262c6cb39284864387a402abde5b",
-          "cell_id": "cell-010",
-          "presentation": "excerpt"
+          "cell_id": "cell-009",
+          "presentation": "excerpt",
+          "fence_language": "python"
         }
       ],
       "omitted_blocks": [
@@ -637,31 +654,31 @@
           "index": 2,
           "language": "python",
           "sha256": "548c5d2ef526cf2980a556258f12b37b165a8dd576c2130b77b2556d4f9e049b",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 3,
           "language": "python",
           "sha256": "07525f34bcb1cafcb727831c405f536eae42ae807e056a1e666ce70dcaa6beda",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 5,
           "language": "python",
           "sha256": "f4d43c5025b9be50897ae1f96c31e29285be16bf5c390b1815df74ca219c6f57",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 6,
           "language": "python",
           "sha256": "10781be74a7eb7ee14d2313059d0e35771501307785944ae1292bdaa84b64435",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 7,
           "language": "plainText",
           "sha256": "6558bec9f9fdd019260d5ea9b89c526234e86f3c590c7384ac01bbd3d813ee75",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         }
       ]
     },
@@ -669,9 +686,12 @@
       "id": "2333zhe-ye-neng-jiao-mediumcong-liang-ba-50lm",
       "kind": "solution",
       "title": "2333｜这也能叫 Medium？从两版超时模拟，到排序后整组削峰",
+      "note_title": "2333. 最小差值平方和",
+      "summary": "",
       "url": "https://leetcode.cn/problems/minimum-sum-of-squared-difference/solution/2333zhe-ye-neng-jiao-mediumcong-liang-ba-50lm/",
       "notebook": "leetcode/daily_challenge/no2333.ipynb",
       "source_slate_sha256": "5e15a3dee76c3f02e2c6326def32ce52be12ead0a8a83619beaddb73c784c63c",
+      "source_content_sha256": "6fd965195beb5b03805f1cca3e207198ed70f02d71efd6e500cb219ce5e29ca6",
       "blocks": [
         {
           "index": 0,
@@ -685,14 +705,16 @@
           "language": "python",
           "sha256": "941cb4673a9968acce35121c6705142f14b35fcb744dff8161e957bd5dc4e011",
           "cell_id": "cell-006",
-          "presentation": "excerpt"
+          "presentation": "excerpt",
+          "fence_language": "python"
         },
         {
           "index": 4,
           "language": "python",
           "sha256": "3e37a9aa0ee52e75e2b6ebbd28229000b85adb00e28a2b62f1653cdeec7d6306",
-          "cell_id": "cell-008",
-          "presentation": "excerpt"
+          "cell_id": "cell-009",
+          "presentation": "excerpt",
+          "fence_language": "python"
         }
       ],
       "omitted_blocks": [
@@ -700,43 +722,43 @@
           "index": 1,
           "language": "python",
           "sha256": "f326182018f091504ec44556897b873a2a920eee16e121194fade8212eaa9df8",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 2,
           "language": "python",
           "sha256": "a6a71420e09dddc9408ad2ffa088af38b67dfd530805a780086e56099978d272",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 5,
           "language": "plainText",
           "sha256": "73e37b16e2d83ae8ae9cb921cd2ea4c2b68b2ae8a17984cb202c4c75944a1f1a",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 6,
           "language": "python",
           "sha256": "dcde1a4c08e9b56b08abed1083d4617a78e0838277f76a75a0b3ae78712823d1",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 7,
           "language": "python",
           "sha256": "0cdc622e4194b075e1fc931495bee9180454c8886e6f38bb955b74e57884e7a6",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 8,
           "language": "plainText",
           "sha256": "e9e714d9cb4c5365766f29c44956fbd42cb5924fc8ed63c4c7470c79ff5f5954",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 9,
           "language": "python",
           "sha256": "e47fa639bb1b3ec309398b4384e1feda71f0e37fa9ef2147703e9cc927a935d5",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         }
       ]
     },
@@ -744,9 +766,12 @@
       "id": "2916xian-duan-shu-xian-bie-ji-zhao-bei-b-fj90",
       "kind": "solution",
       "title": "2916｜线段树先别急着背：把五十亿个子数组，拆成每轮两次区间操作",
+      "note_title": "2916. 子数组不同元素数目的平方和 II",
+      "summary": "",
       "url": "https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii/solution/2916xian-duan-shu-xian-bie-ji-zhao-bei-b-fj90/",
       "notebook": "leetcode/daily_challenge/no2916.ipynb",
       "source_slate_sha256": "b3353e8142cde694f00f8f04c7fec92484fa61d3b095dfe3d504214d350ea9ea",
+      "source_content_sha256": "253c02093c4437323a4a9a3d7e856ca418825b62ff3b152723bfbc59735c6b52",
       "blocks": [
         {
           "index": 0,
@@ -761,49 +786,49 @@
           "index": 1,
           "language": "python",
           "sha256": "11e504e0c5c87d6b3667d39e4528539819bca5e3faf4687b94e296b6363d3d7e",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 2,
           "language": "plainText",
           "sha256": "ce9f7bb726278c18a7c760ddda15de827ad0622e5865532a6fb237cb2dc65376",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 3,
           "language": "plainText",
           "sha256": "e6345dc51628f225eed9e95004745ce48ac74287ed2df155430604f6d5a00738",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 4,
           "language": "python",
           "sha256": "a925538765b5cfa4fc4c42cd14931ca064b24c7ad20068efe08dc9273dae8c7d",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 5,
           "language": "plainText",
           "sha256": "83714fbdb748f7515ca110451cd447b8deac07a84404f29239878d25a977ed9a",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 6,
           "language": "python",
           "sha256": "b6146a177a7b4058322ff4eb092783252a1a8cc8e7d93b8d2d26ff391416a84e",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 7,
           "language": "python",
           "sha256": "53c09c97e7b9bf350d284465edc4c417542ccd18841de4bef9a2ce814ca32914",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 8,
           "language": "python",
           "sha256": "cf27fdd03ec194bcf145a889e8bf612c6078f704680e8240ea97547e4105d334",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         }
       ]
     },
@@ -811,9 +836,12 @@
       "id": "4068kai-hui-zhuan-qian-mo-yu-ye-zhuan-qi-akyz",
       "kind": "solution",
       "title": "4068｜开会赚钱，摸鱼也赚钱：从 DFS、BFS 的方案爆炸到二分优化 DP",
+      "note_title": "4068. 会议收益：搜索到二分优化 DP",
+      "summary": "",
       "url": "https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii/solution/4068kai-hui-zhuan-qian-mo-yu-ye-zhuan-qi-akyz/",
       "notebook": "leetcode/daily_challenge/no4068.ipynb",
       "source_slate_sha256": "7514718d78ab4e4b507f835e579dd0f2beb16e35e3e77b4c627505c6233d5d08",
+      "source_content_sha256": "663cbe68214a91b84f34cb3001d8b24a611cc5c99f9e1996712668a37884592c",
       "blocks": [
         {
           "index": 2,
@@ -826,21 +854,21 @@
           "index": 7,
           "language": "python",
           "sha256": "4e7825d48230bfc228b28a6b35b437beec0993b9e43124ce8093b1d36e7976b7",
-          "cell_id": "cell-007",
+          "cell_id": "cell-006",
           "presentation": "code"
         },
         {
           "index": 9,
           "language": "python",
           "sha256": "2aa2cff31e7763a6b69e3f26a087d0738446abe2243036a6dc967192ee8b501c",
-          "cell_id": "cell-011",
+          "cell_id": "cell-009",
           "presentation": "code"
         },
         {
           "index": 0,
           "language": "python",
           "sha256": "8a5c98afccff4e8d5de5fe6148662337b49f1e81ae6798cb0eb8b123bfe0aa72",
-          "cell_id": "cell-015",
+          "cell_id": "cell-012",
           "presentation": "code"
         }
       ],
@@ -849,97 +877,97 @@
           "index": 1,
           "language": "plainText",
           "sha256": "4f6dd474b39bd1142aa7ab15ce47e68d9d1974c87b3a4173f5922aa951a009d8",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 3,
           "language": "plainText",
           "sha256": "1fa36cd2c065f86b5f773ef39a9cb53dbf7efbdf72b0d5d1ae15b12aaf7f0139",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 4,
           "language": "plainText",
           "sha256": "b50da2997eb02c765e2b352ab9be490a751e561345dcab54a8da4a6a6f87eb93",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 5,
           "language": "plainText",
           "sha256": "505d4cb6af7e2db39a28315dec5e0bf1fcb3616932b29d98cb2a6b15575b5c24",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 6,
           "language": "plainText",
           "sha256": "f27af6e1dd624ca1db0ccd85437fce3c8185ee13767c62f59165b6121ab37ebc",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 8,
           "language": "plainText",
           "sha256": "d2baf15030aa8bc00931a10da63e3d063440181cf6b33e13dd6d86652d8d0b9e",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 10,
           "language": "plainText",
           "sha256": "3d122e11368842aa82235f1bad1a7d9f08d1664d8810f9dcf2933c7b704d9de9",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 11,
           "language": "plainText",
           "sha256": "70f966782549b4dba3e2828e47c13dc1ba96aad1cd8c729128dc327ea366157a",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 12,
           "language": "plainText",
           "sha256": "64a8aac6b019a87e7c2a34b730f6f5725bad783658f7be68fdbe8aff932138f2",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 13,
           "language": "plainText",
           "sha256": "00a86ef205c628638764e3de68db269f90bb66a59988d67ba1412c33da99da6f",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 14,
           "language": "python",
           "sha256": "7518b48f64bdc1f7dafa8b1f00894f4c5c49b8ac431f5d41775ba7f3646777c9",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 15,
           "language": "python",
           "sha256": "6e209c5dad5309f8660b4ed3cb04968b494d036266ea5bfef68b13bebe04dd2b",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 16,
           "language": "plainText",
           "sha256": "a583063990fcac36bdd1c61da112fa18debd30f6367ab1d7d5c93716d94fdb83",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 17,
           "language": "python",
           "sha256": "b0eb32a89222d2d115facc9a9661f20abe02c206661d41890f741dee59b5c53c",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "正文讲解中的局部展开；对应完整实现已保留，不是额外完整解法。"
         },
         {
           "index": 18,
           "language": "plainText",
           "sha256": "bf767ac09f75bbc4061c9e061c1b3d9f68fd67f96ccb63efebc92c27c4c8c797",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         },
         {
           "index": 19,
           "language": "plainText",
           "sha256": "9e2fd5270530d1bb3b45530851ee4ff5fc8fc31a2c2156f6f61018138ae3f33d",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         }
       ]
     },
@@ -947,50 +975,112 @@
       "id": "sLnQAI",
       "kind": "discussion",
       "title": "分享丨力扣523周赛：第三题把我唬住了，读懂以后就这",
+      "note_title": "第 523 场周赛",
+      "summary": "",
       "url": "https://leetcode.cn/discuss/post/sLnQAI/",
       "notebook": "leetcode/contests/weekly_523.ipynb",
       "source_slate_sha256": "3462599e7a375e8181266ab42af8b489adfe67fe5a0b9399ac63c48a4251c713",
-      "blocks": [
-        {
-          "index": 1,
-          "language": "python",
-          "sha256": "1628a3dcfad42dcf93bddd59c7251b3b515e92fa7ea3427b96289a22f1ee330e",
-          "cell_id": "cell-003",
-          "presentation": "code"
-        },
-        {
-          "index": 4,
-          "language": "python",
-          "sha256": "d6ae38a85c7b35c590c663e545f05f38c799546fd84bd2107677f40ac01f1eca",
-          "cell_id": "cell-007",
-          "presentation": "excerpt"
-        },
-        {
-          "index": 5,
-          "language": "python",
-          "sha256": "5b9d59e4207c6e0cbad1d7edaa37e36a671c8b7c9f364c094f3af1593ee2af19",
-          "cell_id": "cell-010",
-          "presentation": "excerpt"
-        }
-      ],
+      "source_content_sha256": "d7392989d0c740a0fce7f8eeda2243ed4f067bb02c54cec35c746316423428ee",
+      "blocks": [],
       "omitted_blocks": [
         {
           "index": 0,
           "language": "plainText",
           "sha256": "3f450e776dcdadf6ca3079f4392502ea5192b03db78d888f36246534d6f649ae",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "讨论中的示意片段或说明；本题代码以本人比赛通过提交为准。"
+        },
+        {
+          "index": 1,
+          "language": "python",
+          "sha256": "1628a3dcfad42dcf93bddd59c7251b3b515e92fa7ea3427b96289a22f1ee330e",
+          "reason": "讨论中的示意片段或说明；本题代码以本人比赛通过提交为准。"
         },
         {
           "index": 2,
           "language": "plainText",
           "sha256": "6ce3aa6224abdc0f9ecfa45ad2f4e0f831f3bcd493c95bb67be128c38663ea91",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "讨论中的示意片段或说明；本题代码以本人比赛通过提交为准。"
         },
         {
           "index": 3,
           "language": "plainText",
           "sha256": "231c167bba078b27e12c3a1401e18cf41ca8a8dc4db5a24e8e8c99ca7ffcf3fe",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "讨论中的示意片段或说明；本题代码以本人比赛通过提交为准。"
+        },
+        {
+          "index": 4,
+          "language": "python",
+          "sha256": "d6ae38a85c7b35c590c663e545f05f38c799546fd84bd2107677f40ac01f1eca",
+          "reason": "讨论中的示意片段或说明；本题代码以本人比赛通过提交为准。"
+        },
+        {
+          "index": 5,
+          "language": "python",
+          "sha256": "5b9d59e4207c6e0cbad1d7edaa37e36a671c8b7c9f364c094f3af1593ee2af19",
+          "reason": "讨论中的示意片段或说明；本题代码以本人比赛通过提交为准。"
+        }
+      ],
+      "contest_slug": "weekly-contest-523",
+      "submissions": [
+        {
+          "submission_id": 754006172,
+          "contest_submission_id": 7437079,
+          "contest_slug": "weekly-contest-523",
+          "user_slug": "4bg5t",
+          "question_id": 4450,
+          "question_slug": "three-fibonacci-sum",
+          "title": "连续三项斐波那契数之和",
+          "language": "python3",
+          "status": 10,
+          "submitted_at": 1791686525,
+          "sha256": "2b72f97e1e31691cec5ed3cf6f1bcef3475626a262be5568f012f479b21b6918",
+          "url": "https://leetcode.cn/submissions/detail/754006172/",
+          "cell_id": "cell-003"
+        },
+        {
+          "submission_id": 754008365,
+          "contest_submission_id": 7437564,
+          "contest_slug": "weekly-contest-523",
+          "user_slug": "4bg5t",
+          "question_id": 4433,
+          "question_slug": "prime-subset-selection-i",
+          "title": "选择质数子集 I",
+          "language": "python3",
+          "status": 10,
+          "submitted_at": 1791687057,
+          "sha256": "c4ea8682e9bda2e4b05bdb45572d3834c7b17059361d48d62b37ba4decf16574",
+          "url": "https://leetcode.cn/submissions/detail/754008365/",
+          "cell_id": "cell-006"
+        },
+        {
+          "submission_id": 754014755,
+          "contest_submission_id": 7438821,
+          "contest_slug": "weekly-contest-523",
+          "user_slug": "4bg5t",
+          "question_id": 4377,
+          "question_slug": "design-bus-seat-booking-system",
+          "title": "设计公交车座位预订系统",
+          "language": "python3",
+          "status": 10,
+          "submitted_at": 1791688690,
+          "sha256": "f8be495f217c48f87a3f5412528d676718076195db073c3d3c470143fdfa43a2",
+          "url": "https://leetcode.cn/submissions/detail/754014755/",
+          "cell_id": "cell-009"
+        },
+        {
+          "submission_id": 754021923,
+          "contest_submission_id": 7439854,
+          "contest_slug": "weekly-contest-523",
+          "user_slug": "4bg5t",
+          "question_id": 4434,
+          "question_slug": "prime-subset-selection-ii",
+          "title": "选择质数子集 II",
+          "language": "python3",
+          "status": 10,
+          "submitted_at": 1791690674,
+          "sha256": "808062bbdbf722541937818dc470d93fde1aca587cec4a381cd671775d2177af",
+          "url": "https://leetcode.cn/submissions/detail/754021923/",
+          "cell_id": "cell-012"
         }
       ]
     },
@@ -998,50 +1088,178 @@
       "id": "JelbXH",
       "kind": "discussion",
       "title": "分享丨双周赛193 我的代码有韧性 我的脑子没有",
+      "note_title": "第 193 场双周赛",
+      "summary": "",
       "url": "https://leetcode.cn/discuss/post/JelbXH/",
       "notebook": "leetcode/contests/biweekly_193.ipynb",
       "source_slate_sha256": "a8236540034de9055ce902fb02863f09f2afa9c3b0515651b79555588c7fd077",
+      "source_content_sha256": "bc9f78221968a9c5139311f68c08093f712e70f60ff05ab2d70ac9f40ca276e0",
       "blocks": [
-        {
-          "index": 0,
-          "language": "python",
-          "sha256": "e404a1e7f138837b9ed5b486a5be13cecd1b70cfcf777b4e2af4d78ec2ae4d67",
-          "cell_id": "cell-003",
-          "presentation": "code"
-        },
-        {
-          "index": 1,
-          "language": "python",
-          "sha256": "03f6f6b3d88bc445a2ba6c5d986fab1305208be089532c08e29a7013f57f0763",
-          "cell_id": "cell-005",
-          "presentation": "excerpt"
-        },
         {
           "index": 4,
           "language": "python",
           "sha256": "44e49c0f4d0972427301a4bfd6c2774b1476cdd6b8816790f43b73424ee02b35",
-          "cell_id": "cell-011",
+          "cell_id": "cell-012",
           "presentation": "code"
         }
       ],
       "omitted_blocks": [
         {
+          "index": 0,
+          "language": "python",
+          "sha256": "e404a1e7f138837b9ed5b486a5be13cecd1b70cfcf777b4e2af4d78ec2ae4d67",
+          "reason": "讨论中的示意片段或说明；本题代码以本人比赛通过提交为准。"
+        },
+        {
+          "index": 1,
+          "language": "python",
+          "sha256": "03f6f6b3d88bc445a2ba6c5d986fab1305208be089532c08e29a7013f57f0763",
+          "reason": "讨论中的示意片段或说明；本题代码以本人比赛通过提交为准。"
+        },
+        {
           "index": 2,
           "language": "plainText",
           "sha256": "6617279cde2a1ef5e7ecd77b24c9008d5aa9258403a2285f91ce9f3748c2c30c",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "讨论中的示意片段或说明；本题代码以本人比赛通过提交为准。"
         },
         {
           "index": 3,
           "language": "plainText",
           "sha256": "8d5ffdf6ef5120bd131056e47a529f33470e8a3bc34adc004ed4bcaa974fc55a",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "讨论中的示意片段或说明；本题代码以本人比赛通过提交为准。"
         },
         {
           "index": 5,
           "language": "plainText",
           "sha256": "c755b6977643ae3d382839fd876765799485ab3758da3070edbdbedeb1de0df5",
-          "reason": "重复的局部展开或文字示意；知识点已合并到简短说明，完整算法保留。"
+          "reason": "讨论中的示意片段或说明；本题代码以本人比赛通过提交为准。"
+        }
+      ],
+      "contest_slug": "biweekly-contest-193",
+      "submissions": [
+        {
+          "submission_id": 753965686,
+          "contest_submission_id": 7435099,
+          "contest_slug": "biweekly-contest-193",
+          "user_slug": "4bg5t",
+          "question_id": 4444,
+          "question_slug": "maximum-product-pair-with-target-sum",
+          "title": "和为目标值的最大乘积对",
+          "language": "python3",
+          "status": 10,
+          "submitted_at": 1791644050,
+          "sha256": "f4d1a4ce584966e96bb6ceb35184dc0623c3463154d5e636229ddae1a54f8e16",
+          "url": "https://leetcode.cn/submissions/detail/753965686/",
+          "cell_id": "cell-003"
+        },
+        {
+          "submission_id": 753973599,
+          "contest_submission_id": 7436069,
+          "contest_slug": "biweekly-contest-193",
+          "user_slug": "4bg5t",
+          "question_id": 4438,
+          "question_slug": "longest-resilient-subarray-i",
+          "title": "最长有韧性的子数组 I",
+          "language": "python3",
+          "status": 10,
+          "submitted_at": 1791646695,
+          "sha256": "7f0bf29170db6906dfb9bc33452fcd93a850447106ff8045c197f9dee8a02ae5",
+          "url": "https://leetcode.cn/submissions/detail/753973599/",
+          "cell_id": "cell-006"
+        },
+        {
+          "submission_id": 753973655,
+          "contest_submission_id": 7436072,
+          "contest_slug": "biweekly-contest-193",
+          "user_slug": "4bg5t",
+          "question_id": 4439,
+          "question_slug": "longest-resilient-subarray-ii",
+          "title": "最长有韧性的子数组 II",
+          "language": "python3",
+          "status": 10,
+          "submitted_at": 1791646716,
+          "sha256": "7f0bf29170db6906dfb9bc33452fcd93a850447106ff8045c197f9dee8a02ae5",
+          "url": "https://leetcode.cn/submissions/detail/753973655/",
+          "cell_id": "cell-009"
+        }
+      ]
+    },
+    {
+      "id": "python3-pai-xu-hou-shu-quan-bfs-bing-cha-j0ku",
+      "kind": "solution",
+      "title": "[Python3] 排序后数圈：BFS / 并查集｜我以为要 DP，结果在查户口",
+      "note_title": "3551. 数位和排序需要的最小交换次数",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/minimum-swaps-to-sort-by-digit-sum/solution/python3-pai-xu-hou-shu-quan-bfs-bing-cha-j0ku/",
+      "notebook": "leetcode/daily_challenge/no3551.ipynb",
+      "source_slate_sha256": "5aabbad0c4759291a0150d66a32293646144ca4d9d445a8f593528573b731b26",
+      "source_content_sha256": "da112c5e57889e179252074841dcd43850073e766edd3c6b6c4eed253ec25ef0",
+      "blocks": [
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "69aaae77b8d44bb8bcedbc956669e18e184125a2958c582d83de5e6b7b0d9ed2",
+          "cell_id": "cell-003",
+          "presentation": "code"
+        },
+        {
+          "index": 6,
+          "language": "python",
+          "sha256": "5ace7ae65eb9363d59acba1d0d4ff5413e16dbb0ad9692b7c985bbad043706e4",
+          "cell_id": "cell-005",
+          "presentation": "code"
+        },
+        {
+          "index": 7,
+          "language": "python",
+          "sha256": "786c48aa5b2f8221dbb02b666fe53cf1338061fdba864cbd2108b9374ca305e2",
+          "cell_id": "cell-008",
+          "presentation": "code"
+        },
+        {
+          "index": 9,
+          "language": "python",
+          "sha256": "2b31971204634c7fee88277ff837080a560e114509875c494e2edcd967c2cdfd",
+          "cell_id": "cell-010",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 1,
+          "language": "plainText",
+          "sha256": "72ec57bfcfb4562a1052ea7bdc7917fc632d7f3f80d9afb9bb94b58c373e69d1",
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
+        },
+        {
+          "index": 2,
+          "language": "plainText",
+          "sha256": "38d523ac1c50929a70f7916639b2c89cea90591a8378ec02ad7bd67648d5515d",
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
+        },
+        {
+          "index": 3,
+          "language": "plainText",
+          "sha256": "3810004a2dd3fcd107a71d23538e5d4fccb6f54c827c2de7359f2b2dbc644573",
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
+        },
+        {
+          "index": 4,
+          "language": "plainText",
+          "sha256": "04e791a4ab9efe3f23859d12d557b1c0f15da2f1f159274effb27bda4036d849",
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
+        },
+        {
+          "index": 5,
+          "language": "plainText",
+          "sha256": "10f2bae6fff35b8f6f31a7f56cf042ac3aee03f1a8133b3bdb81d52ee7c5e6f0",
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
+        },
+        {
+          "index": 8,
+          "language": "plainText",
+          "sha256": "a749d8f5561f19c48a321943fa57e0a33917ef6571624a44a54b6938d11c3a82",
+          "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
         }
       ]
     }

@@ -11,6 +11,7 @@ from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import leetcode_source as source
 import sync_leetcode as sync
+import verify_notebooks as verifier
 
 
 CODE = 'class Solution:\n    def answer(self):\n        # 原注释与空白必须保留\n        return 42\n'
@@ -149,6 +150,53 @@ class SyncTests(unittest.TestCase):
         self.assertEqual(source.extract_blocks(markdown)[0]['code'], CODE)
         slate = [{'type': 'CodeBlock', 'children': [{'language': 'python', 'children': [{'text': CODE[:10]}, {'text': CODE[10:]}]}]}]
         self.assertEqual(source.extract_blocks({'slateValue': json.dumps(slate)})[0]['code'], CODE)
+
+    def test_submission_preserves_whitespace_and_detects_code_changes(self):
+        import nbformat
+        current = post()
+        code = CODE + '\n    \n'
+        current['contest'] = {'slug': 'weekly-contest-523', 'user_slug': 'test', 'submissions': [
+            {'question': {'question_id': 42, 'title_slug': 'example', 'title': '示例'},
+             'record': {'id': 123, 'status': 10, 'date': 1791686525},
+             'detail': {'id': 456, 'lang': 'python3', 'code': code}}]}
+        curated = spec()
+        del curated['summary']
+        curated['cells'].append({'type': 'submission', 'id': 456})
+        notebook, entry = sync.make_notebook(current, curated, self.snapshot['fetched_at'])
+        cells = {c.id: c for c in nbformat.reads(json.dumps(notebook), as_version=4).cells}
+        cid = entry['submissions'][0]['cell_id']
+        self.assertEqual(cells[cid].source, code)
+        self.assertEqual(verifier.check_submissions(entry, cells, 'test'), {cid})
+        with self.assertRaisesRegex(ValueError, 'owner mismatch'):
+            verifier.check_submissions(entry, cells, 'someone-else')
+        incomplete = copy.deepcopy(curated)
+        incomplete['cells'].pop()
+        with self.assertRaisesRegex(ValueError, 'Retain every accepted'):
+            sync.make_notebook(current, incomplete, self.snapshot['fetched_at'])
+        cells[cid].source = code.rstrip()
+        with self.assertRaisesRegex(ValueError, 'Changed original'):
+            verifier.check_submissions(entry, cells, 'test')
+
+    def test_contest_submission_requires_matching_public_owner_and_identity(self):
+        history = {'userContestRankingHistory': [{'attended': True, 'ranking': 149,
+                    'contest': {'title': '第 523 场周赛'}}]}
+        record = {'id': 123, 'submission_id': 456, 'status': 10, 'contest_id': 1421,
+                  'data_region': 'CN', 'lang': 'python3'}
+        ranking = {'total_rank': [{'user_slug': 'test', 'contest_id': 1421, 'data_region': 'CN'}],
+                   'questions': [{'question_id': 42, 'title_slug': 'example', 'title': '示例'}],
+                   'submissions': [{'42': record}]}
+        detail = {'id': 456, 'code': CODE, 'lang': 'python3', 'contest_submission': 123}
+        with patch.object(source, 'graphql', return_value=history), patch.object(source, 'public_json', side_effect=[ranking, detail]):
+            contest = source.fetch_contest_submissions('weekly-contest-523', 'test')
+            self.assertEqual(contest['submissions'][0]['detail']['code'], CODE)
+        wrong_detail = {**detail, 'contest_submission': 999}
+        with patch.object(source, 'graphql', return_value=history), patch.object(source, 'public_json', side_effect=[ranking, wrong_detail]):
+            with self.assertRaisesRegex(ValueError, 'identity mismatch'):
+                source.fetch_contest_submissions('weekly-contest-523', 'test')
+        ranking['total_rank'][0]['user_slug'] = 'someone-else'
+        with patch.object(source, 'graphql', return_value=history), patch.object(source, 'public_json', return_value=ranking):
+            with self.assertRaisesRegex(ValueError, 'User absent'):
+                source.fetch_contest_submissions('weekly-contest-523', 'test')
 
     def test_all_solution_and_discussion_pages_are_read(self):
         solution = lambda slug: {'node': {'slug': slug, 'title': slug}}

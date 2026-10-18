@@ -16,8 +16,8 @@ def sha256(text):
     return hashlib.sha256(text.encode('utf-8')).hexdigest()
 
 
-def graphql(query, variables):
-    request = Request('https://leetcode.cn/graphql/',
+def graphql(query, variables, endpoint='https://leetcode.cn/graphql/'):
+    request = Request(endpoint,
                       data=json.dumps({'query': query, 'variables': variables}).encode(),
                       headers={'Content-Type': 'application/json', 'User-Agent': 'ai-notebook-source-check/1.0'})
     try:
@@ -31,6 +31,54 @@ def graphql(query, variables):
     require(not result.get('errors'), f"GraphQL: {result.get('errors')}")
     require(result.get('data') is not None, 'LeetCode returned no data')
     return result['data']
+
+
+def public_json(path):
+    request = Request('https://leetcode.cn' + path,
+                      headers={'User-Agent': 'ai-notebook-source-check/1.0'})
+    try:
+        with urlopen(request, timeout=30) as response:
+            return json.load(response)
+    except (HTTPError, URLError) as exc:
+        raise RuntimeError(f'LeetCode public request failed ({path}): {exc}') from exc
+
+
+def fetch_submission(submission_id):
+    require(isinstance(submission_id, int) and submission_id > 0, 'Invalid submission id')
+    detail = public_json(f'/api/submissions/{submission_id}/')
+    require(detail.get('id') == submission_id and isinstance(detail.get('code'), str)
+            and detail['code'].strip(), f'Unreadable submission {submission_id}')
+    return detail
+
+
+def fetch_contest_submissions(contest_slug, user_slug):
+    """Resolve ownership through the public ranking before reading accepted code."""
+    match = re.fullmatch(r'(biweekly|weekly)-contest-(\d+)', contest_slug)
+    require(match is not None, 'Invalid contest slug')
+    contest_title = f"第 {match[2]} 场{'双周赛' if match[1] == 'biweekly' else '周赛'}"
+    history = graphql('query($slug:String!){userContestRankingHistory(userSlug:$slug){attended ranking contest{title}}}',
+                      {'slug': user_slug}, endpoint='https://leetcode.cn/graphql/noj-go/')['userContestRankingHistory']
+    ranking = next((item['ranking'] for item in history
+                    if item['attended'] and item['contest']['title'] == contest_title), None)
+    require(isinstance(ranking, int) and ranking > 0, f'No attended contest for {user_slug}: {contest_slug}')
+    page = (ranking - 1) // 25 + 1
+    result = public_json(f'/contest/api/ranking/{contest_slug}/?pagination={page}&region=local')
+    index = next((i for i, row in enumerate(result['total_rank']) if row['user_slug'] == user_slug), None)
+    require(index is not None, f'User absent from expected contest ranking page: {user_slug}, {contest_slug}')
+    row = result['total_rank'][index]
+    require(row['contest_id'] and row['data_region'] == 'CN', 'Unexpected contest ranking region')
+    questions = {str(question['question_id']): question for question in result['questions']}
+    submissions = []
+    for question_id, record in result['submissions'][index].items():
+        require(record['status'] == 10 and record['contest_id'] == row['contest_id']
+                and record['data_region'] == 'CN', 'Unexpected contest submission status or owner ranking')
+        detail = fetch_submission(record['submission_id'])
+        require(detail.get('contest_submission') == record['id'] and detail.get('lang') == record['lang'],
+                f"Contest submission identity mismatch: {record['submission_id']}")
+        submissions.append({'question': questions[question_id], 'record': record, 'detail': detail})
+    require(submissions, f'No accepted submissions for {user_slug}: {contest_slug}')
+    return {'slug': contest_slug, 'user_slug': user_slug, 'ranking': ranking,
+            'questions': result['questions'], 'submissions': submissions}
 
 
 def list_posts(user_slug):
