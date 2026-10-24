@@ -223,6 +223,9 @@ def build(root, cache, curation_path):
 
 def render_index(root, manifest=None):
     manifest = manifest or load(root / 'leetcode/sources.json')
+    index_path = root / 'leetcode/README.md'
+    existing = index_path.read_text(encoding='utf-8') if index_path.exists() else ''
+    local_review = re.search(r'^## 本地周赛复盘\n.*?(?=^## |\Z)', existing, re.MULTILINE | re.DOTALL)
     def escaped(text):
         return text.replace('|', '\\|').replace('\n', ' ')
     lines = ['# 力扣笔记', '', f"整理自 [公开主页]({manifest['profile']})，最近内容同步：**{manifest['fetched_at'][:10]}**。",
@@ -235,11 +238,13 @@ def render_index(root, manifest=None):
             title = escaped(entry.get('note_title') or entry['title'])
             lines.append(f"| [{title}]({path}) | [原文]({entry['url']}) |")
         lines.append('')
+    if local_review:
+        lines.extend(local_review.group().rstrip().splitlines() + [''])
     lines.extend(['## 复用与校验', '', '[任务说明与复用流程](SYNC_TASK.md) · [来源清单](sources.json)', '',
                   '```bash', 'python leetcode/tools/sync_leetcode.py fetch',
                   'python leetcode/tools/verify_notebooks.py --online --execute', '```', '',
                   '仓库已有历史材料保留。4068 会议文章挂在 2916 题下，按实际内容命名；双周赛 193 第四题只有未完成占位。', ''])
-    (root / 'leetcode/README.md').write_text('\n'.join(lines), encoding='utf-8')
+    index_path.write_text('\n'.join(lines), encoding='utf-8')
 
 
 def main():

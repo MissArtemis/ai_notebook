@@ -1,9 +1,9 @@
 {
   "profile": "https://leetcode.cn/u/4bg5t/",
-  "fetched_at": "2026-10-18",
+  "fetched_at": "2026-10-24",
   "coverage": {
-    "solutions": 8,
-    "discussions": 2,
+    "solutions": 12,
+    "discussions": 3,
     "solutions_has_next_page": false,
     "discussions_next_token": null
   },
@@ -1260,6 +1260,847 @@
           "language": "plainText",
           "sha256": "a749d8f5561f19c48a321943fa57e0a33917ef6571624a44a54b6938d11c3a82",
           "reason": "说明用的文字、公式或图示；按代码笔记偏好省略。"
+        }
+      ]
+    },
+    {
+      "id": "3644ti-mu-rang-wo-pai-xu-wo-que-zhi-xie-6sxl7",
+      "kind": "solution",
+      "title": "3644｜题目让我排序，我却只写了一个 AND",
+      "note_title": "3644. 排序排列：错位元素按位与",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/maximum-k-to-sort-a-permutation/solution/3644ti-mu-rang-wo-pai-xu-wo-que-zhi-xie-6sxl7/",
+      "notebook": "leetcode/daily_challenge/no3644.ipynb",
+      "source_slate_sha256": "917fa70ab56a628e5bf82ff5c7f9dda0bd946c5aec55dc51f6292e5705f1e882",
+      "source_content_sha256": "df53ca208a90d3ad53a80ac30a08516342c38695ad59c8c1603f4fe84d0627c1",
+      "blocks": [
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "45a1c9a9f467f52fcc5d471c766c47d421798138aa7b5b8f9b6df581b8e407fc",
+          "cell_id": "cell-002",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 1,
+          "language": "python",
+          "sha256": "cd7df7593a9a224b7e55b70ccf3170094abbfad696e7a05be1fefee8c3fd272f",
+          "reason": "交换合法性条件，已归入独立注释。"
+        },
+        {
+          "index": 2,
+          "language": "plainText",
+          "sha256": "9761d5289425dc6e1af6b8a2f1eaa077d7a30d45d108e11c9a9914a9e53b487e",
+          "reason": "两元素交换示例，完整解法已保留。"
+        },
+        {
+          "index": 3,
+          "language": "plainText",
+          "sha256": "028f21f2912e8d7dc67532e2474e5299b51ea72cbfb1d4ba43318a992e4df72a",
+          "reason": "两元素按位与的逐位演算，已归纳为错位元素取与。"
+        },
+        {
+          "index": 4,
+          "language": "plainText",
+          "sha256": "e9751b6443bc9424d5d9d5d38f0b50199587297852d9dc2adf2c87c7fc04d236",
+          "reason": "有序排列的下标示意，完整解法已包含判断。"
+        },
+        {
+          "index": 5,
+          "language": "python",
+          "sha256": "a80d19e619e60ca8014dcf2938e47469890641d902debdee40a1086bab64fcdd",
+          "reason": "主循环局部展开，与完整代码重复。"
+        },
+        {
+          "index": 6,
+          "language": "python",
+          "sha256": "b99be0440e950b08be0d2f1e0b34753c04adec6b5288947f405d2b274b9be509",
+          "reason": "交换条件局部展开，与块 1 重复。"
+        },
+        {
+          "index": 7,
+          "language": "plainText",
+          "sha256": "ede242160b6e2fa10d82a09613c3851f49b37e976cf9b1038af78846ea8ee3bd",
+          "reason": "三元素按位与的逐位演算，已归入注释。"
+        },
+        {
+          "index": 8,
+          "language": "python",
+          "sha256": "6604a81f7896cf16d800df16116f3bd17f2349dc1115653761bfb14362926489",
+          "reason": "合法答案的位包含关系，已归纳为错位元素共同位。"
+        },
+        {
+          "index": 9,
+          "language": "python",
+          "sha256": "37710e99d47dff948f1fcda8e6829d627121b17df6839e018602882fdb9ac4c3",
+          "reason": "答案赋值示意，完整实现已经保留。"
+        },
+        {
+          "index": 10,
+          "language": "python",
+          "sha256": "f14977a01dd72d5a48caa0502f37ff53fa13f8e664f08331da0a91bcb1c084bb",
+          "reason": "中转元素的按位与条件，已归入注释。"
+        },
+        {
+          "index": 11,
+          "language": "plainText",
+          "sha256": "7871ed47eb56e3012d89292305a477dd90c292dc306eaa1ed019b13fa37a18b7",
+          "reason": "按位与结果的取值范围说明，未包含独立解法。"
+        },
+        {
+          "index": 12,
+          "language": "plainText",
+          "sha256": "a5373420448b56634ffe5640efda94bda3024dac4883dd0a0af59fdec8213e8b",
+          "reason": "三次中转交换的过程示意，已归入注释。"
+        },
+        {
+          "index": 13,
+          "language": "python",
+          "sha256": "4392593ea836d502f70dbd2ad8a0b431b245796d749d02e75c07081b1ea17153",
+          "reason": "中转数字已归位的教学输入，临时校验脚本验证该例。"
+        },
+        {
+          "index": 14,
+          "language": "plainText",
+          "sha256": "e682f7786e3ba89830931ad4cf94ce8addeefbf4b45e50e47fb53b90b5095ab7",
+          "reason": "教学输入中错位数字两两取与的演算，未包含独立实现。"
+        },
+        {
+          "index": 15,
+          "language": "plainText",
+          "sha256": "04d5937e9f156f11c9f625d709512b7973f9238649ac242e4ec7d813d40fe6ca",
+          "reason": "教学输入与中转数字取与的演算，已归入注释。"
+        },
+        {
+          "index": 16,
+          "language": "python",
+          "sha256": "9e37de8358598ad70c68241bd0f787f9d932353eb15597f6836fab0f2fa8edb1",
+          "reason": "初始化语句，与完整代码重复。"
+        },
+        {
+          "index": 17,
+          "language": "plainText",
+          "sha256": "37ae3aab5be659ac65c031d669e3b067a7082e01a4db693febc67b18db094dea",
+          "reason": "-1 的二进制表示示意，完整代码已保留初始化。"
+        },
+        {
+          "index": 18,
+          "language": "python",
+          "sha256": "4a3ef1f7077921aa203bf5a6774194bb43e7e2db709405a2e32fce8bf8c07074",
+          "reason": "-1 作为按位与初值的性质，未包含独立实现。"
+        },
+        {
+          "index": 19,
+          "language": "python",
+          "sha256": "295a0d6403d792a833b3cfb57eb1a1e58cc320f555b4a68019cacc44a5fd5049",
+          "reason": "错误初值 0 的性质说明，完整代码使用 -1。"
+        },
+        {
+          "index": 20,
+          "language": "python",
+          "sha256": "a80d19e619e60ca8014dcf2938e47469890641d902debdee40a1086bab64fcdd",
+          "reason": "主循环重复展开，完整代码已保留。"
+        },
+        {
+          "index": 21,
+          "language": "python",
+          "sha256": "3e82d9f7f9695a7dc52a83125026d9a6f09d6b7c932ec2d38cdee179ac22b3e2",
+          "reason": "提前返回分支，与完整代码重复。"
+        },
+        {
+          "index": 22,
+          "language": "python",
+          "sha256": "ad1756a7fde6379f006315936e75b38832b3050da44c55df4e667c1628f6529b",
+          "reason": "提前返回条件的等价改写，未包含独立解法。"
+        },
+        {
+          "index": 23,
+          "language": "python",
+          "sha256": "295a0d6403d792a833b3cfb57eb1a1e58cc320f555b4a68019cacc44a5fd5049",
+          "reason": "0 与任意数按位与的性质，已归入提前返回注释。"
+        },
+        {
+          "index": 24,
+          "language": "plainText",
+          "sha256": "3187ec28821bef911446493e516d57e7ab850fae908b05e8bef6fd7e59f38bfb",
+          "reason": "0 归位仍可能得到零答案的教学例子，临时校验覆盖。"
+        },
+        {
+          "index": 25,
+          "language": "python",
+          "sha256": "d7ba6d2188b612920cfaf086619158860971adcb1b9016f61cf65f0b59d22f54",
+          "reason": "返回表达式，与完整代码重复。"
+        },
+        {
+          "index": 26,
+          "language": "python",
+          "sha256": "41d0950b191c8da4670e5860b026d330af4157498e4bfa5f6e2b0a21e509d14a",
+          "reason": "有序数组返回零的演算，已归入注释。"
+        }
+      ]
+    },
+    {
+      "id": "743-wang-luo-yan-chi-shi-jian-yong-yi-da-23q4",
+      "kind": "solution",
+      "title": "743 网络延迟时间 用一道题学会套用 Dijkstra 模板",
+      "note_title": "743. 网络延迟时间：Dijkstra 模板",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/network-delay-time/solution/743-wang-luo-yan-chi-shi-jian-yong-yi-da-23q4/",
+      "notebook": "leetcode/daily_challenge/no743.ipynb",
+      "source_slate_sha256": "dbeed8bac6c5d3797f5be6b72483d155c1c8606fb7d78256cad14ff0dda91a12",
+      "source_content_sha256": "0be2ca483c1e91fac12aa89fc8033f71136b8414aae1571ce22cd20a66a3c404",
+      "blocks": [
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "0794f99194623869b01dc6f658606c2921a963d0a73f7fa306c4e87d02512cbb",
+          "cell_id": "cell-002",
+          "presentation": "code"
+        },
+        {
+          "index": 2,
+          "language": "python",
+          "sha256": "abc3fd1bdfc5de3b45a9c5042770f6a96af49249bd43ef32be460ff6cb6e1fd7",
+          "cell_id": "cell-004",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 1,
+          "language": "plainText",
+          "sha256": "46c20437b75894b573fba5d5d834008d8764e042540dac604d513617103d3bf8",
+          "reason": "展示松弛过程的边权示意，完整模板与原文可运行样例已保留。"
+        },
+        {
+          "index": 3,
+          "language": "plainText",
+          "sha256": "d4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35",
+          "reason": "样例输出为 2；不在 Notebook 保存旧输出，临时断言核对结果。"
+        }
+      ]
+    },
+    {
+      "id": "2093-qian-wang-mu-biao-cheng-shi-de-zui-zt831",
+      "kind": "solution",
+      "title": "2093 前往目标城市的最小费用 从普通 Dijkstra 模板到分层 Dijkstra 模板",
+      "note_title": "2093. 前往目标城市的最小费用：分层 Dijkstra",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/minimum-cost-to-reach-city-with-discounts/solution/2093-qian-wang-mu-biao-cheng-shi-de-zui-zt831/",
+      "notebook": "leetcode/daily_challenge/no2093.ipynb",
+      "source_slate_sha256": "cea127470ec6cb32a7342dd3549dcd38556886dbdd380677fd7b1297a0dcc930",
+      "source_content_sha256": "787b6846aebe39539649bcb51dc8f297051ae9f1dc8d44790b90a6a9d4fe5637",
+      "blocks": [
+        {
+          "index": 1,
+          "language": "python",
+          "sha256": "d2353329aa9568dba344e6d8632280d2a14d198f3565a529e971a28fb2b3eb33",
+          "cell_id": "cell-002",
+          "presentation": "code"
+        },
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "13b9dbcc8a4c14ab4d54681ae3c229b250c9f33fc0f90e95febf48f28807403c",
+          "cell_id": "cell-005",
+          "presentation": "code"
+        },
+        {
+          "index": 10,
+          "language": "python",
+          "sha256": "1b440ba1d25b70050e87880b2baac0ada0b923522db0f099a87be6cf47c17a3d",
+          "cell_id": "cell-007",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 2,
+          "language": "plainText",
+          "sha256": "5fa66cb49691162a0d93ed63acce54197fecb07bd6451fd8570987dc4d604b39",
+          "reason": "说明一维距离不够的链式图示，已归纳为二维状态注释。"
+        },
+        {
+          "index": 3,
+          "language": "plainText",
+          "sha256": "e7b17a0596e196950a4b4fa7bee32aff87263a7800ae56de1a257086af215b41",
+          "reason": "先用折扣与后用折扣的费用演算，完整分层解法已保留。"
+        },
+        {
+          "index": 4,
+          "language": "plainText",
+          "sha256": "c88ddf3e60d256dddaabeaa8120c51691bb52299c4f3326f0ef26c0334dbac41",
+          "reason": "三个折扣层的示意，已归入状态含义注释。"
+        },
+        {
+          "index": 5,
+          "language": "python",
+          "sha256": "d73df4ba1a64ed24347c2358c6dd29aa836154002229a9e8035ad0db920b6861",
+          "reason": "距离初始化局部展开，与完整代码重复。"
+        },
+        {
+          "index": 6,
+          "language": "python",
+          "sha256": "2fa40cbbe6efed09a2d24c83bc249935f27bd17282208a9cd935aadd07aa422d",
+          "reason": "过期检查局部展开，与完整代码重复。"
+        },
+        {
+          "index": 7,
+          "language": "plainText",
+          "sha256": "a0f9ea5ff9d23d0a7f645c9c834fe8c105f368a4cd8d224f858cf354e8e4fbf1",
+          "reason": "折扣改变最优路线的教学例子，临时校验覆盖。"
+        },
+        {
+          "index": 8,
+          "language": "plainText",
+          "sha256": "1bdbb61a6f4041eaefd5a7f869064d1efbf150bfeca0bc3bffe45b29c8f4932c",
+          "reason": "终点各层状态含义示意，已归入注释。"
+        },
+        {
+          "index": 9,
+          "language": "python",
+          "sha256": "27f38c13d602b3f6040a87536f24f4996a4af5edede8c1c9ef6be2ad806d3057",
+          "reason": "终点取最小值的语句，与完整代码重复。"
+        },
+        {
+          "index": 11,
+          "language": "plainText",
+          "sha256": "19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b7",
+          "reason": "原文样例输出 9；不保存旧输出，临时断言核对结果。"
+        },
+        {
+          "index": 12,
+          "language": "plainText",
+          "sha256": "e4615ef41361efbc3777bd9cac9f77d0e080787a985b9345c91d2a58409da391",
+          "reason": "原文样例最优路径的状态变化，完整实现与原文样例已保留。"
+        }
+      ]
+    },
+    {
+      "id": "465qian-du-huan-qing-liao-li-kou-huan-bu-eszd",
+      "kind": "solution",
+      "title": "465｜钱都还清了，力扣还不放过我：从贪心踩坑到状态压缩 DP",
+      "note_title": "465. 最优账单平衡：贪心踩坑、DFS 与状态压缩 DP",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/optimal-account-balancing/solution/465qian-du-huan-qing-liao-li-kou-huan-bu-eszd/",
+      "notebook": "leetcode/daily_challenge/no465.ipynb",
+      "source_slate_sha256": "b64e5b1b31fe705dabee1643d1a2336f5087c07846613bd470ea8bf3578b4bf9",
+      "source_content_sha256": "68f7a5de0bc45591b706bcd28ea6d2dc6408fdb93a1b964a15ffda92829ece77",
+      "blocks": [
+        {
+          "index": 6,
+          "language": "python",
+          "sha256": "497ee06acb8b66a961ea7efbafe37048a8b4b64b0737f234b5d5af5d24d22dfc",
+          "cell_id": "cell-002",
+          "presentation": "excerpt",
+          "fence_language": "python"
+        },
+        {
+          "index": 11,
+          "language": "python",
+          "sha256": "f000749a3423750f945c0354b5475e5b0a9d34a247c0322be0482ad11599bc3e",
+          "cell_id": "cell-004",
+          "presentation": "excerpt",
+          "fence_language": "python"
+        },
+        {
+          "index": 12,
+          "language": "python",
+          "sha256": "1054c8843308a6ea8b1f3880703d84982d18478689f760266769a5073bea82db",
+          "cell_id": "cell-005",
+          "presentation": "excerpt",
+          "fence_language": "python"
+        },
+        {
+          "index": 16,
+          "language": "python",
+          "sha256": "eec332c946712dc9e1b92a8fe282808f98cbd6e1e01a861d4582b3e0642de200",
+          "cell_id": "cell-008",
+          "presentation": "code"
+        },
+        {
+          "index": 20,
+          "language": "python",
+          "sha256": "bcbc06f14371d4e8e59f63d0926ea36439d8bb190dd841f002097679a3eb6bf3",
+          "cell_id": "cell-010",
+          "presentation": "excerpt",
+          "fence_language": "python"
+        },
+        {
+          "index": 22,
+          "language": "python",
+          "sha256": "ef833ec85b2e7395a6a171d7369b4059cdc1ed603b811c73f1343487591c2669",
+          "cell_id": "cell-013",
+          "presentation": "code"
+        },
+        {
+          "index": 28,
+          "language": "python",
+          "sha256": "fd3403b34b9496d95ce817d5650cd569fbfe10eaeedab0e6b278a1d9e8ea1d2e",
+          "cell_id": "cell-016",
+          "presentation": "code"
+        },
+        {
+          "index": 31,
+          "language": "python",
+          "sha256": "66ba1aee18257920e0317aedce68ebfaf3e1e7ed0b3913339bfa3ff69541f966",
+          "cell_id": "cell-019",
+          "presentation": "code"
+        },
+        {
+          "index": 34,
+          "language": "python",
+          "sha256": "06b268baac19ec1c228f74117c2f7ec6e637494a77b9a93a1de693da06a5f45a",
+          "cell_id": "cell-022",
+          "presentation": "code"
+        },
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "c6e0ced5a455bdd55c1e8fc37317aa4d208633a5eb34713de6b9d2c343818549",
+          "cell_id": "cell-025",
+          "presentation": "code"
+        },
+        {
+          "index": 55,
+          "language": "python",
+          "sha256": "adc7099ecda8a55d4dc7e5385997a200135442091b2faaf722282314cd535178",
+          "cell_id": "cell-027",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 1,
+          "language": "python",
+          "sha256": "8b193099d39befc3e34fc6a28b63aa2f083851cf3c163fd6456d86282d9bf1f0",
+          "reason": "交易三元组的格式示意，完整解法已经保留。"
+        },
+        {
+          "index": 2,
+          "language": "python",
+          "sha256": "92bd02fb6fd89ea3422f831b9fe2badc50d6954c1107c4a07250639e6debdd10",
+          "reason": "净余额统计语句，所有完整版本均已包含。"
+        },
+        {
+          "index": 3,
+          "language": "python",
+          "sha256": "3311210d35383cc601acd89c4fd8ec37f84ec9a34ba91c4350a7b4946128ce0d",
+          "reason": "净余额示例输入，完整原文测试另行保留。"
+        },
+        {
+          "index": 4,
+          "language": "python",
+          "sha256": "cb85693ace0e23e1b2d07a1c2f8e36c611a47ded630edc7040e109f9db719fa3",
+          "reason": "净余额列表示意，已归入状态说明。"
+        },
+        {
+          "index": 5,
+          "language": "python",
+          "sha256": "7d488f9345b348784ca9ae53cad0f804d0975445a064e334b0a196560f9e5c18",
+          "reason": "总余额为零的性质，已归入注释。"
+        },
+        {
+          "index": 7,
+          "language": "python",
+          "sha256": "28a5d41134e2129d04f0d57cfc0599e6da55505fdfc346c9309b4c731bcae7bc",
+          "reason": "贪心反例输入，与原文完整测试块 55 重复。"
+        },
+        {
+          "index": 8,
+          "language": "plainText",
+          "sha256": "fbffee6062709b7a37f428f5bee0fdce002e557febf0ac2f3cdd3c18fd410500",
+          "reason": "反例的非零余额列举，错误贪心标题已说明结果。"
+        },
+        {
+          "index": 9,
+          "language": "python",
+          "sha256": "160ca74b99f38d374433c9fa88f88c4f8933a88239ad0b77a3b9e05aaaf3d30b",
+          "reason": "贪心正负余额排序结果，与错误版完整代码重复。"
+        },
+        {
+          "index": 10,
+          "language": "plainText",
+          "sha256": "79f4c9734e3f56d92ca6bab600a25a9e754febcbbb84d38c4054ae5df64ff690",
+          "reason": "反例的最优分组演示，错误贪心说明已记录 6 与 4 的差异。"
+        },
+        {
+          "index": 13,
+          "language": "python",
+          "sha256": "53fc33ac29fbbbc95bdc5e90b3b972dec6666b51edca8b70ee25abfd2582a3fe",
+          "reason": "错误减法的正确替代语句，已写明并保留完整贪心版本。"
+        },
+        {
+          "index": 14,
+          "language": "plainText",
+          "sha256": "d8c2175cc425f551bdcba7e8ce7f23d2eb7777d8f9c94e41b29795843670bfd4",
+          "reason": "零和分组次数公式，已归纳为 DFS 计数注释。"
+        },
+        {
+          "index": 15,
+          "language": "plainText",
+          "sha256": "fcba26521bcab64da766006dcc69f8876bce58a8f51f06da2437980058ced4cd",
+          "reason": "零和分组数与交易数的反例演算，错误版说明已保留。"
+        },
+        {
+          "index": 17,
+          "language": "python",
+          "sha256": "07c3b978d1fd10ab50613a7fb9efcd016eacbe02b11352c3cd96ee3d3a2f971e",
+          "reason": "DFS 调用签名，与完整 DFS 重复。"
+        },
+        {
+          "index": 18,
+          "language": "python",
+          "sha256": "1e07e36dec5849b72f5f6e49f5e17659776759f7fd5630b313bf434093eab0eb",
+          "reason": "分支计数局部展开，完整 DFS 已包含。"
+        },
+        {
+          "index": 19,
+          "language": "plainText",
+          "sha256": "823e503923daf5cc70835ff3b82ae1c339428e1cdbf3795c24c5dcbe3655461f",
+          "reason": "选人顺序示意，未包含独立实现。"
+        },
+        {
+          "index": 21,
+          "language": "python",
+          "sha256": "6fb7d2c1c9f98d72f3edc066cfb9f768aad35cd07f85d6d8b1bb92c7761ccd25",
+          "reason": "独立分支计数的等价写法，完整 DFS 已保留 new_cnt。"
+        },
+        {
+          "index": 23,
+          "language": "python",
+          "sha256": "3ac9ddcd2e74bd979d44335063ae426977cdec25178c506d398c610becd4b168",
+          "reason": "已选与剩余余额的守恒关系，已归入删除 res 的注释。"
+        },
+        {
+          "index": 24,
+          "language": "python",
+          "sha256": "58748c794bba0d826418a6c17b189d709b8dd1adb5c4e0dddf0bdc0ad0998d29",
+          "reason": "原 res 的非零判断，与完整 DFS 重复。"
+        },
+        {
+          "index": 25,
+          "language": "python",
+          "sha256": "d51e812e974ca96b20115da03555762b2912731d0a4587ae2c42981fed39a152",
+          "reason": "剩余余额和的等价非零判断，与剪枝版完整代码重复。"
+        },
+        {
+          "index": 26,
+          "language": "python",
+          "sha256": "afe97931318f1a266476eae6308e04f03e742a147ca4aaa80076caa87a03824e",
+          "reason": "删除 res 后的调用签名，与完整代码重复。"
+        },
+        {
+          "index": 27,
+          "language": "python",
+          "sha256": "df6bc0c68f9a32184f931c26ae43aa062d56cabe3679821785ac299381052503",
+          "reason": "更强的剪枝比较示意，保留原代码的严格大于写法，并注明区别。"
+        },
+        {
+          "index": 29,
+          "language": "python",
+          "sha256": "aa35ab39b94facacf8882224ac7e17089775a6bc615748caec6a3e62a9420987",
+          "reason": "重复余额例子，已归纳为同层去重注释。"
+        },
+        {
+          "index": 30,
+          "language": "python",
+          "sha256": "e1b386c2b1ce936ef1de3e07613e2ac49d1c4eed20f3f5e62ae83dc3c68b2069",
+          "reason": "同层 visited 局部展开，与完整去重版本重复。"
+        },
+        {
+          "index": 32,
+          "language": "python",
+          "sha256": "7826a737cbb25bd8db2d0c4ee5986d886503995b53a5480029d198e328ca0513",
+          "reason": "缓存装饰器与调用签名，与完整缓存版本重复。"
+        },
+        {
+          "index": 33,
+          "language": "python",
+          "sha256": "899eb6114a03287d714d2a3ac0c8a1b25dc35d6cdf251521db518085b02b38f2",
+          "reason": "相同剩余状态、不同历史计数的示意，已归入缓存不足的注释。"
+        },
+        {
+          "index": 35,
+          "language": "python",
+          "sha256": "3f2a1deffffda829183f5828bb87d6272edeab34a8c7a4d3d690b335963fcbf4",
+          "reason": "只缓存剩余状态的函数定义，与完整记忆化版本重复。"
+        },
+        {
+          "index": 36,
+          "language": "python",
+          "sha256": "8b254701f974b52ed349c6e769fbc06561d90baa0ae27f4ba239e52964556edc",
+          "reason": "空状态边界，与完整记忆化版本重复。"
+        },
+        {
+          "index": 37,
+          "language": "python",
+          "sha256": "c13e2ec533542ffb461f1a82d86e1d44a5ef24d86c808bfe573ed0ce6eae54dc",
+          "reason": "每次选人的计数表达式，与完整记忆化版本重复。"
+        },
+        {
+          "index": 38,
+          "language": "python",
+          "sha256": "de4a8eca6e25cd73eb8fc4a9df25424c8b9f36cd75cd919659acc8a9ce70df26",
+          "reason": "最优值转移局部展开，与完整记忆化版本重复。"
+        },
+        {
+          "index": 39,
+          "language": "python",
+          "sha256": "1ad389a95ded0c7088297f4a14c2df68360412794524cc45fb671f7c5f680457",
+          "reason": "单人剩余状态的语义示例，已用剩余任务说明限定上下文。"
+        },
+        {
+          "index": 40,
+          "language": "python",
+          "sha256": "adca2c83612c35d5c376ce8197414cf25c50476aeaf3a9f915da5c21ce99ff0e",
+          "reason": "DP 状态压缩的余额示例，未包含独立实现。"
+        },
+        {
+          "index": 41,
+          "language": "python",
+          "sha256": "36a0d2a6451324a25ab51350b3eee19707ec307df61582a72c37960def0ed3ad",
+          "reason": "dp[mask] 的定义，已归入 DP 注释。"
+        },
+        {
+          "index": 42,
+          "language": "python",
+          "sha256": "8ffc8ce2c959c04bb6b322a4f3f360c2320c8076856f4390537098b27f6392a1",
+          "reason": "DP 空状态初值，与最终完整实现重复。"
+        },
+        {
+          "index": 43,
+          "language": "python",
+          "sha256": "06b48b66ae3bdb7d5a99b95f049ab67ff85474603d3557adc025976055c39939",
+          "reason": "判断位是否存在，与最终完整实现重复。"
+        },
+        {
+          "index": 44,
+          "language": "python",
+          "sha256": "cf14ee253e0c5404180924e0d91d9265f308572e191eb20166fca4f92b4f975d",
+          "reason": "移除一个人的位运算，与最终完整实现重复。"
+        },
+        {
+          "index": 45,
+          "language": "python",
+          "sha256": "e18f29532f5546701900a4d18c67ef84a2d90a21a62767fd3a1a5fbb136a6cbd",
+          "reason": "记忆化转移的等价写法，与完整记忆化版本重复。"
+        },
+        {
+          "index": 46,
+          "language": "python",
+          "sha256": "2e502ce0bdc52dd7c56f7ab81715a75adaca6b94f6cf9ec400bac3cfee5992ce",
+          "reason": "DP 转移局部展开，与最终完整实现重复。"
+        },
+        {
+          "index": 47,
+          "language": "python",
+          "sha256": "ff706b1a37476fd35804f0dd408d02ce6a8e8bc49fc5a98b3ffe5ba3769ab274",
+          "reason": "DP 单步计数局部展开，与最终完整实现重复。"
+        },
+        {
+          "index": 48,
+          "language": "python",
+          "sha256": "98bd7104685e215c7bbe113fb39d2b1c721b4b8a371bf084d0a082e92e642dd1",
+          "reason": "状态依赖的大小关系，已归入递增填表注释。"
+        },
+        {
+          "index": 49,
+          "language": "python",
+          "sha256": "1777f227d28f6f4c30339afc5383861dae1de34a79745894e0d8a860b3508d3d",
+          "reason": "最低位提取，与最终完整实现重复。"
+        },
+        {
+          "index": 50,
+          "language": "plainText",
+          "sha256": "b9e1ed96cc1ab03ef2d89fcb0976e7e874285dbd77b205adfde7a94f635ec784",
+          "reason": "最低位提取的二进制示意，未包含独立实现。"
+        },
+        {
+          "index": 51,
+          "language": "python",
+          "sha256": "86388c3e8a9a6a5d308c655ec561a18e93ea77b3045cdbbb481725b8216bc6bd",
+          "reason": "最低位下标的局部展开，与最终完整实现重复。"
+        },
+        {
+          "index": 52,
+          "language": "python",
+          "sha256": "67320d2390ed3ad54043dce98a494b7f8b967a7f7ead0efc6539cc02dbf62e1d",
+          "reason": "子集余额和转移，与最终完整实现重复。"
+        },
+        {
+          "index": 53,
+          "language": "python",
+          "sha256": "adca2c83612c35d5c376ce8197414cf25c50476aeaf3a9f915da5c21ce99ff0e",
+          "reason": "DP 手算的教学输入，临时校验覆盖对应答案。"
+        },
+        {
+          "index": 54,
+          "language": "plainText",
+          "sha256": "40e1a8ddddf023213c8e7b5e3ebc1ba9e2425ca30d5fd5e62283d2fcc8ebf4e0",
+          "reason": "DP 手算过程，最终实现与原文测试已保留。"
+        },
+        {
+          "index": 56,
+          "language": "plainText",
+          "sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+          "reason": "原文样例输出为 4；不保存旧输出，临时断言核对。"
+        },
+        {
+          "index": 57,
+          "language": "plainText",
+          "sha256": "dd8e60190bf72cb97b8bc61ac28b01d81eb12cff99621112c5cca3b77698ce9a",
+          "reason": "复杂度公式，依用户精简偏好不另设复杂度章节。"
+        }
+      ]
+    },
+    {
+      "id": "lYH5ET",
+      "kind": "discussion",
+      "title": "分享｜力扣524周赛：异或负责吓人，颜色负责认爹，区间负责让我加班",
+      "note_title": "第 524 场周赛：公开文章与比赛通过代码",
+      "summary": "",
+      "url": "https://leetcode.cn/discuss/post/lYH5ET/",
+      "notebook": "leetcode/contests/weekly_524_public.ipynb",
+      "source_slate_sha256": "1d0897523d4956fcc825668264cc387ca930382a57ad753b53bd2139a4cde4da",
+      "source_content_sha256": "c3dc2a418d0d2a464e55e6ca01ec72eba4828e48f374e0555db3dd7e2d7ebee4",
+      "blocks": [
+        {
+          "index": 2,
+          "language": "python",
+          "sha256": "47b752d6e9cfec53000275e93b8f4df52a3598397ba80136cc475de83a0647e5",
+          "cell_id": "cell-007",
+          "presentation": "code"
+        },
+        {
+          "index": 4,
+          "language": "python",
+          "sha256": "e2958563f9558a16b72b6b19b70c07492057d44f960da149497398f3f7b92dcd",
+          "cell_id": "cell-013",
+          "presentation": "code"
+        },
+        {
+          "index": 6,
+          "language": "python",
+          "sha256": "ab722e745bdfe845ccb5f4dabd3dad0f8c6de46967c2ea5fb45036f351b15d57",
+          "cell_id": "cell-019",
+          "presentation": "code"
+        },
+        {
+          "index": 9,
+          "language": "python",
+          "sha256": "0c9289684520db4afdeaa4da35f74aa372e7be1e0217837e3a74b8b5bb8735c5",
+          "cell_id": "cell-025",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 0,
+          "language": "plainText",
+          "sha256": "12efb0b9049aa4f980df6bef4f0a4bad6f9d7f70811032580f66946e381991fb",
+          "reason": "异或为零的等价条件，已归入第一题独立注释。"
+        },
+        {
+          "index": 1,
+          "language": "plainText",
+          "sha256": "b45511fc86625bd89a7fb1fa8fe5fcb921a4348546c73a0ab30883288d906331",
+          "reason": "第一题连续重复段的演算，完整代码已保留。"
+        },
+        {
+          "index": 3,
+          "language": "plainText",
+          "sha256": "d3344ad9486b28ccbfbdd175dba751df43e9bc935389c56eac07d239ade6add5",
+          "reason": "网格模拟路径示意，已归入第二题停止条件注释。"
+        },
+        {
+          "index": 5,
+          "language": "plainText",
+          "sha256": "c0710d8b173068783a0c3d1ac88d21bcc986aaed166ace71e182d31cbdbddce4",
+          "reason": "颜色轮换顺序，完整第三题代码已包含映射。"
+        },
+        {
+          "index": 7,
+          "language": "plainText",
+          "sha256": "353f688537baa193718f40994e9de66560079f9224f66b6876e56c65bb00100f",
+          "reason": "目标区间合并示例，第四题两个完整版本已保留。"
+        },
+        {
+          "index": 8,
+          "language": "python",
+          "sha256": "3405791424c4c4b5eb3a846fed85e4653f491b3bc5794b1781223e0ecb268bc4",
+          "reason": "当前覆盖起点的局部展开，与第四题完整代码重复。"
+        },
+        {
+          "index": 10,
+          "language": "python",
+          "sha256": "f05ad36e2a23105904d0ee9f93c6c714650843ac05eb7489f224553df094f22c",
+          "reason": "覆盖失败条件的局部展开，与第四题完整代码重复。"
+        }
+      ],
+      "contest_slug": "weekly-contest-524",
+      "submissions": [
+        {
+          "submission_id": 755461721,
+          "contest_submission_id": 7440356,
+          "contest_slug": "weekly-contest-524",
+          "user_slug": "4bg5t",
+          "question_id": 4430,
+          "question_slug": "minimum-deletions-to-make-array-sharp",
+          "title": "使相邻元素按位异或非零的最少删除次数",
+          "language": "python3",
+          "status": 10,
+          "submitted_at": 1792290836,
+          "sha256": "28c51e620d3b2daa1abc77e0f950da348c5d1462502dd026fdf7f450e0920d34",
+          "url": "https://leetcode.cn/submissions/detail/755461721/",
+          "cell_id": "cell-005"
+        },
+        {
+          "submission_id": 755462730,
+          "contest_submission_id": 7440710,
+          "contest_slug": "weekly-contest-524",
+          "user_slug": "4bg5t",
+          "question_id": 4456,
+          "question_slug": "last-visited-cell-in-a-directional-grid",
+          "title": "有向网格中的最后访问单元格",
+          "language": "python3",
+          "status": 10,
+          "submitted_at": 1792291137,
+          "sha256": "b9202694d32eef45d002e43cbf3bacfef4bc1018f1590cef90e65f684e41825a",
+          "url": "https://leetcode.cn/submissions/detail/755462730/",
+          "cell_id": "cell-011"
+        },
+        {
+          "submission_id": 755466883,
+          "contest_submission_id": 7441649,
+          "contest_slug": "weekly-contest-524",
+          "user_slug": "4bg5t",
+          "question_id": 3968,
+          "question_slug": "find-root-of-a-colored-tree",
+          "title": "找到颜色树的根",
+          "language": "python3",
+          "status": 10,
+          "submitted_at": 1792292369,
+          "sha256": "d8ae19f94c3f1d943fb1c26035652422bb4ea674239213abd26af1a00e2f6dec",
+          "url": "https://leetcode.cn/submissions/detail/755466883/",
+          "cell_id": "cell-017"
+        },
+        {
+          "submission_id": 755481398,
+          "contest_submission_id": 7443314,
+          "contest_slug": "weekly-contest-524",
+          "user_slug": "4bg5t",
+          "question_id": 3769,
+          "question_slug": "minimum-interval-selection-to-cover-target-intervals",
+          "title": "覆盖目标区间的最少区间",
+          "language": "python3",
+          "status": 10,
+          "submitted_at": 1792295669,
+          "sha256": "737ac4c157f5fa10e4600ea58bd0f0df7d7d50dc5be8d0cd35f3575cbe45f552",
+          "url": "https://leetcode.cn/submissions/detail/755481398/",
+          "cell_id": "cell-023"
         }
       ]
     }

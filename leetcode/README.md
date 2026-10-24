@@ -1,10 +1,10 @@
 # 力扣笔记
 
-整理自 [公开主页](https://leetcode.cn/u/4bg5t/)，最近内容同步：**2026-10-18**。
+整理自 [公开主页](https://leetcode.cn/u/4bg5t/)，最近内容同步：**2026-10-24**。
 
 原代码逐字保留，只加少量独立注释。比赛代码来自本人排行榜中的通过提交；片段与占位简短标明。
 
-## 题解（8 篇）
+## 题解（12 篇）
 
 | 笔记 | 来源 |
 | --- | --- |
@@ -16,13 +16,18 @@
 | [2916. 子数组不同元素数目的平方和 II](daily_challenge/no2916.ipynb) | [原文](https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii/solution/2916xian-duan-shu-xian-bie-ji-zhao-bei-b-fj90/) |
 | [4068. 会议收益：搜索到二分优化 DP](daily_challenge/no4068.ipynb) | [原文](https://leetcode.cn/problems/subarrays-distinct-element-sum-of-squares-ii/solution/4068kai-hui-zhuan-qian-mo-yu-ye-zhuan-qi-akyz/) |
 | [3551. 数位和排序需要的最小交换次数](daily_challenge/no3551.ipynb) | [原文](https://leetcode.cn/problems/minimum-swaps-to-sort-by-digit-sum/solution/python3-pai-xu-hou-shu-quan-bfs-bing-cha-j0ku/) |
+| [3644. 排序排列：错位元素按位与](daily_challenge/no3644.ipynb) | [原文](https://leetcode.cn/problems/maximum-k-to-sort-a-permutation/solution/3644ti-mu-rang-wo-pai-xu-wo-que-zhi-xie-6sxl7/) |
+| [743. 网络延迟时间：Dijkstra 模板](daily_challenge/no743.ipynb) | [原文](https://leetcode.cn/problems/network-delay-time/solution/743-wang-luo-yan-chi-shi-jian-yong-yi-da-23q4/) |
+| [2093. 前往目标城市的最小费用：分层 Dijkstra](daily_challenge/no2093.ipynb) | [原文](https://leetcode.cn/problems/minimum-cost-to-reach-city-with-discounts/solution/2093-qian-wang-mu-biao-cheng-shi-de-zui-zt831/) |
+| [465. 最优账单平衡：贪心踩坑、DFS 与状态压缩 DP](daily_challenge/no465.ipynb) | [原文](https://leetcode.cn/problems/optimal-account-balancing/solution/465qian-du-huan-qing-liao-li-kou-huan-bu-eszd/) |
 
-## 讨论（2 篇）
+## 讨论（3 篇）
 
 | 笔记 | 来源 |
 | --- | --- |
 | [第 523 场周赛](contests/weekly_523.ipynb) | [原文](https://leetcode.cn/discuss/post/sLnQAI/) |
 | [第 193 场双周赛](contests/biweekly_193.ipynb) | [原文](https://leetcode.cn/discuss/post/JelbXH/) |
+| [第 524 场周赛：公开文章与比赛通过代码](contests/weekly_524_public.ipynb) | [原文](https://leetcode.cn/discuss/post/lYH5ET/) |
 
 ## 本地周赛复盘
 

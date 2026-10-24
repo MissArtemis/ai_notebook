@@ -86,7 +86,7 @@ def list_posts(user_slug):
     seen_ids = set()
     skip = 0
     while True:
-        result = graphql('query($slug:String!,$skip:Int){solutionArticles(userSlug:$slug,skip:$skip,first:100){pageInfo{hasNextPage} edges{node{title slug createdAt status question{titleSlug translatedTitle questionFrontendId}}}}}',
+        result = graphql('query($slug:String!,$skip:Int){solutionArticles(userSlug:$slug,skip:$skip,first:100){pageInfo{hasNextPage} edges{node{title slug createdAt status content slateValue contentFormat author{username} question{titleSlug translatedTitle questionFrontendId}}}}}',
                          {'slug': user_slug, 'skip': skip})['solutionArticles']
         page = [edge['node'] for edge in result['edges']]
         require(page or not result['pageInfo']['hasNextPage'], 'Solution pagination made no progress')
@@ -135,6 +135,12 @@ def fetch_post(post, user_slug):
     if post['kind'] == 'solution':
         article = graphql('query($slug:String!){solutionArticle(slug:$slug){title slug content slateValue contentFormat author{username} question{titleSlug translatedTitle questionFrontendId}}}',
                           {'slug': post['id']})['solutionArticle']
+        # Some public posts are readable in the author's article connection even
+        # when the detail field returns null. Keep using the original source.
+        if article is None and (post.get('slateValue') or post.get('content')):
+            require(post.get('slug') == post['id'], 'Listed solution identifier mismatch')
+            article = {key: post.get(key) for key in
+                       ('title', 'slug', 'content', 'slateValue', 'contentFormat', 'author', 'question')}
         require(article is not None, f"Unavailable solution: {post['id']}")
         author = article['author']['username']
         url = f"https://leetcode.cn/problems/{article['question']['titleSlug']}/solution/{post['id']}/"

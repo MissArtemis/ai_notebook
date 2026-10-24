@@ -69,6 +69,15 @@ class SyncTests(unittest.TestCase):
         self.build()
         self.assertEqual(before, self.tracked())
 
+    def test_index_preserves_existing_local_contest_reviews(self):
+        index = self.root / 'leetcode/README.md'
+        local = '## 本地周赛复盘\n\n| 比赛 | 笔记 |\n| --- | --- |\n| 524 | [复盘](contests/local.md) |\n\n'
+        index.write_text('# 力扣笔记\n\n' + local + '## 复用与校验\n旧说明\n', encoding='utf-8')
+        self.build()
+        result = index.read_text(encoding='utf-8')
+        self.assertIn(local, result)
+        self.assertEqual(result.count('## 本地周赛复盘'), 1)
+
     def test_new_updated_unchanged_missing_are_distinct(self):
         entries = []
         for identifier in ['same', 'changed', 'gone']:
@@ -150,6 +159,22 @@ class SyncTests(unittest.TestCase):
         self.assertEqual(source.extract_blocks(markdown)[0]['code'], CODE)
         slate = [{'type': 'CodeBlock', 'children': [{'language': 'python', 'children': [{'text': CODE[:10]}, {'text': CODE[10:]}]}]}]
         self.assertEqual(source.extract_blocks({'slateValue': json.dumps(slate)})[0]['code'], CODE)
+
+    def test_public_listing_body_is_used_when_detail_is_unavailable(self):
+        listed = {'id': 'one', 'kind': 'solution', 'slug': 'one', 'title': '示例',
+                  'content': '```python\n' + CODE + '\n```', 'slateValue': None,
+                  'contentFormat': 'MARKDOWN', 'author': {'username': 'test'},
+                  'question': {'titleSlug': 'example'}}
+        with patch.object(source, 'graphql', return_value={'solutionArticle': None}):
+            current = source.fetch_post(listed, 'test')
+            self.assertEqual(current['blocks'][0]['code'], CODE)
+            self.assertEqual(current['author'], 'test')
+            with self.assertRaisesRegex(ValueError, 'Unexpected author'):
+                source.fetch_post(listed, 'another-user')
+            with self.assertRaisesRegex(ValueError, 'identifier mismatch'):
+                source.fetch_post({**listed, 'slug': 'another-post'}, 'test')
+            with self.assertRaisesRegex(ValueError, 'Unavailable solution'):
+                source.fetch_post({**listed, 'content': ''}, 'test')
 
     def test_submission_preserves_whitespace_and_detects_code_changes(self):
         import nbformat
