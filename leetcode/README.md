@@ -1,10 +1,10 @@
 # 力扣笔记
 
-整理自 [公开主页](https://leetcode.cn/u/4bg5t/)，最近内容同步：**2026-10-24**。
+整理自 [公开主页](https://leetcode.cn/u/4bg5t/)，最近内容同步：**2026-10-31**。
 
 原代码逐字保留，只加少量独立注释。比赛代码来自本人排行榜中的通过提交；片段与占位简短标明。
 
-## 题解（12 篇）
+## 题解（15 篇）
 
 | 笔记 | 来源 |
 | --- | --- |
@@ -20,6 +20,9 @@
 | [743. 网络延迟时间：Dijkstra 模板](daily_challenge/no743.ipynb) | [原文](https://leetcode.cn/problems/network-delay-time/solution/743-wang-luo-yan-chi-shi-jian-yong-yi-da-23q4/) |
 | [2093. 前往目标城市的最小费用：分层 Dijkstra](daily_challenge/no2093.ipynb) | [原文](https://leetcode.cn/problems/minimum-cost-to-reach-city-with-discounts/solution/2093-qian-wang-mu-biao-cheng-shi-de-zui-zt831/) |
 | [465. 最优账单平衡：贪心踩坑、DFS 与状态压缩 DP](daily_challenge/no465.ipynb) | [原文](https://leetcode.cn/problems/optimal-account-balancing/solution/465qian-du-huan-qing-liao-li-kou-huan-bu-eszd/) |
+| [666. 路径总和 IV：节点编码与 DFS](daily_challenge/no666.ipynb) | [原文](https://leetcode.cn/problems/path-sum-iv/solution/666-lu-jing-zong-he-iv-de-jie-dian-bian-4l18r/) |
+| [3882. 网格图中最小异或路径：集合 DP 与滚动数组](daily_challenge/no3882.ipynb) | [原文](https://leetcode.cn/problems/minimum-xor-path-in-a-grid/solution/3882-wang-ge-tu-zhong-zui-xiao-yi-huo-lu-6pwv/) |
+| [3619. 总价值可以被 K 整除的岛屿数目：DFS](daily_challenge/no3619.ipynb) | [原文](https://leetcode.cn/problems/count-islands-with-total-value-divisible-by-k/solution/3619-zong-jie-zhi-ke-yi-bei-k-zheng-chu-kysza/) |
 
 ## 讨论（3 篇）
 

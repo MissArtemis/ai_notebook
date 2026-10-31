@@ -1,8 +1,8 @@
 {
   "profile": "https://leetcode.cn/u/4bg5t/",
-  "fetched_at": "2026-10-24",
+  "fetched_at": "2026-10-31",
   "coverage": {
-    "solutions": 12,
+    "solutions": 15,
     "discussions": 3,
     "solutions_has_next_page": false,
     "discussions_next_token": null
@@ -2101,6 +2101,295 @@
           "sha256": "737ac4c157f5fa10e4600ea58bd0f0df7d7d50dc5be8d0cd35f3575cbe45f552",
           "url": "https://leetcode.cn/submissions/detail/755481398/",
           "cell_id": "cell-023"
+        }
+      ]
+    },
+    {
+      "id": "666-lu-jing-zong-he-iv-de-jie-dian-bian-4l18r",
+      "kind": "solution",
+      "title": "666 路径总和 IV 的节点编码与 DFS 复盘",
+      "note_title": "666. 路径总和 IV：节点编码与 DFS",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/path-sum-iv/solution/666-lu-jing-zong-he-iv-de-jie-dian-bian-4l18r/",
+      "notebook": "leetcode/daily_challenge/no666.ipynb",
+      "source_slate_sha256": "af378a8e5af110f226dc7e0f16bac7391ee72b4bb3439d54ece524cfaaf03b44",
+      "source_content_sha256": "df04dcd33146cb0180506183de5e9b7da23d26788d1fb884c5fce02e2e13a77a",
+      "blocks": [
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "0453de83b6e3b3ee4809a4a0ae2cec49ada7daa381943e8ea8d9b1f1015e84cb",
+          "cell_id": "cell-003",
+          "presentation": "code"
+        },
+        {
+          "index": 4,
+          "language": "python",
+          "sha256": "535ef8f672aeeb0c872377274713e90319a95b943c9710f24a3811105b769a9d",
+          "cell_id": "cell-006",
+          "presentation": "excerpt",
+          "fence_language": "python"
+        },
+        {
+          "index": 6,
+          "language": "python",
+          "sha256": "e1bf76d4ed6df71df1c97eba7d40ba6dfa958659717e9a7f8e9522aec56b6357",
+          "cell_id": "cell-007",
+          "presentation": "excerpt",
+          "fence_language": "python"
+        },
+        {
+          "index": 9,
+          "language": "python",
+          "sha256": "f34bcff6c0027c6c3e1e3e59e4153f9fe31165272c604df620a43f423af29335",
+          "cell_id": "cell-010",
+          "presentation": "code"
+        },
+        {
+          "index": 10,
+          "language": "python",
+          "sha256": "f64b57bf34bcd1a8ff7c6142c7d92fc31a9bf3c52abeb9a4099cc4675d6f33de",
+          "cell_id": "cell-011",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 1,
+          "language": "plainText",
+          "sha256": "0b7b695d2b9200e466d95f72aff25b33adbce56fab449281dc3763ae672ca88a",
+          "reason": "示例树的文本图；样例输入与原始运行代码已保留。"
+        },
+        {
+          "index": 2,
+          "language": "python",
+          "sha256": "970110d7db952f43b1ed3b964e7e864c2395f44939c012866d573793c60a32a5",
+          "reason": "字典构建局部展开，已包含在两份完整实现中。"
+        },
+        {
+          "index": 3,
+          "language": "python",
+          "sha256": "7b517e030ecde724348c76a63a1375ceda5036dacf15e1616f62fcfb76fccef6",
+          "reason": "孩子编号局部公式，已包含在完整实现与独立注释中。"
+        },
+        {
+          "index": 5,
+          "language": "python",
+          "sha256": "400b75083d6754d8a958f48fab756d83a2cdecceddacbfe1163f988bc8e6ce60",
+          "reason": "修正后的孩子列表片段，原始保存版已逐字包含。"
+        },
+        {
+          "index": 7,
+          "language": "plainText",
+          "sha256": "8e97523b7f4612f6399f3fa9826088944d720d69e7cfd4d9f7d68b5ee590c895",
+          "reason": "解释少算路径的示意树，错误片段与简短说明已保留。"
+        },
+        {
+          "index": 8,
+          "language": "plainText",
+          "sha256": "be778c537bdd5a26753f5b22bf0c86e7e5402297f077deca15a368e664eabe5f",
+          "reason": "解释空孩子的示意树，空节点返回 0 已在注释中说明。"
+        },
+        {
+          "index": 11,
+          "language": "plainText",
+          "sha256": "248ec1cd511d14b812fa584c6784fbd2e4c94a645c34ae33d9f3bb601cd2590d",
+          "reason": "样例打印输出；保留生成该输出的原始样例，Notebook 不保存输出。"
+        }
+      ]
+    },
+    {
+      "id": "3882-wang-ge-tu-zhong-zui-xiao-yi-huo-lu-6pwv",
+      "kind": "solution",
+      "title": "3882. 网格图中最小异或路径：我想只留最小值，异或说先别急",
+      "note_title": "3882. 网格图中最小异或路径：集合 DP 与滚动数组",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/minimum-xor-path-in-a-grid/solution/3882-wang-ge-tu-zhong-zui-xiao-yi-huo-lu-6pwv/",
+      "notebook": "leetcode/daily_challenge/no3882.ipynb",
+      "source_slate_sha256": "8df30eb37a200273bbae254fa71d1ee625dcceb891e1c7a0f8e380710573abe7",
+      "source_content_sha256": "b4985182fc0ceb20f5b770b1c7b06af6023d442e0ea0cf62f8ddde8cc658aaef",
+      "blocks": [
+        {
+          "index": 3,
+          "language": "python",
+          "sha256": "390f9ab732aa017b25016351fd854d7b74845f7d9f949bb5c632ff62f8bffedb",
+          "cell_id": "cell-003",
+          "presentation": "excerpt",
+          "fence_language": "python"
+        },
+        {
+          "index": 6,
+          "language": "python",
+          "sha256": "6a91a86e414258d102486578d4e00ee7dce3b6ab05cd09747eea952dd0f43676",
+          "cell_id": "cell-006",
+          "presentation": "code"
+        },
+        {
+          "index": 10,
+          "language": "python",
+          "sha256": "dfb217687839591bb3959b9b33bfdc578a504d163bf57b4bda35f3540cb5b24f",
+          "cell_id": "cell-009",
+          "presentation": "code"
+        },
+        {
+          "index": 16,
+          "language": "python",
+          "sha256": "896496b27f9fdcc14fcdfac1a235ce29289dace0ba26918e238a87c1198619c2",
+          "cell_id": "cell-010",
+          "presentation": "code"
+        },
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "a9f5a2d7a5c355f7edcd4f1c8783b2a63c1be288a633de1c20b45c994f882b86",
+          "cell_id": "cell-012",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 1,
+          "language": "plainText",
+          "sha256": "ff10e507eec6ecd82a9f9131c62409f37dad7eef7c1cbbcde80bdfb5f1182b06",
+          "reason": "基础异或算式示意，不属于独立实现。"
+        },
+        {
+          "index": 2,
+          "language": "plainText",
+          "sha256": "a40d052ab0a2326213f671ed1bee8e7cd4cfa1c4b9ff8c3e766e0e95789acc71",
+          "reason": "累计异或算式示意，不属于独立实现。"
+        },
+        {
+          "index": 4,
+          "language": "plainText",
+          "sha256": "e04aa4dd1eb8789bcc2a521ec87f580faf20475c6bdd4bef72bfb67d418504b1",
+          "reason": "异或使大小关系翻转的文本演算；已用反例简短说明错误原因。"
+        },
+        {
+          "index": 5,
+          "language": "plainText",
+          "sha256": "f8424f124882b119c3efd6f32457300dc20893c96c2fff5f6a2b37dda2063c26",
+          "reason": "反例的文本排版，已在错误版本说明中保留同一网格。"
+        },
+        {
+          "index": 7,
+          "language": "plainText",
+          "sha256": "a165e6358ff96a71e506f952e75e73ae19cad4d7209a611d5f45e4dce214098a",
+          "reason": "样例网格的文本排版，原始样例代码已保留。"
+        },
+        {
+          "index": 8,
+          "language": "python",
+          "sha256": "480720cafed9f4ec6bdcbf0e13bbf37a22844856e1007e1e56e65cde47c4ef86",
+          "reason": "二维 DP 的上方转移片段，Solution 2 已逐字包含。"
+        },
+        {
+          "index": 9,
+          "language": "plainText",
+          "sha256": "f378746635acd76c474a77d0201e65e70476592977278ba0c9c958623bb8adf2",
+          "reason": "集合转移的文字公式，完整代码与一行注释已说明。"
+        },
+        {
+          "index": 11,
+          "language": "plainText",
+          "sha256": "4cf5b552d5e20e2efe88cf174f36b325c5de3fb5e10ebe2b801f1e51717e9c7f",
+          "reason": "滚动数组的行归属示意，独立注释已说明更新前后的含义。"
+        },
+        {
+          "index": 12,
+          "language": "python",
+          "sha256": "83195b5a921c971f60e91fc66a746a6d736bd8949a3aae913deb126d64755b5b",
+          "reason": "生成新集合的局部展开，Solution 3 已逐字包含。"
+        },
+        {
+          "index": 13,
+          "language": "python",
+          "sha256": "02636a7f9785189ffe5854e17ae1e34b3da231d703173978bd5a52de50390f35",
+          "reason": "合并左方集合的局部展开，Solution 3 已逐字包含。"
+        },
+        {
+          "index": 14,
+          "language": "python",
+          "sha256": "4efe60e0a6a9083ab8406a7ffefba92816b43fe9a78825c593636acc6c88250b",
+          "reason": "覆盖当前位置的局部展开，Solution 3 已逐字包含。"
+        },
+        {
+          "index": 15,
+          "language": "plainText",
+          "sha256": "a165e6358ff96a71e506f952e75e73ae19cad4d7209a611d5f45e4dce214098a",
+          "reason": "重复排版的样例网格，原始样例代码已保留。"
+        }
+      ]
+    },
+    {
+      "id": "3619-zong-jie-zhi-ke-yi-bei-k-zheng-chu-kysza",
+      "kind": "solution",
+      "title": "3619 总价值可以被 K 整除的岛屿数目",
+      "note_title": "3619. 总价值可以被 K 整除的岛屿数目：DFS",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/count-islands-with-total-value-divisible-by-k/solution/3619-zong-jie-zhi-ke-yi-bei-k-zheng-chu-kysza/",
+      "notebook": "leetcode/daily_challenge/no3619.ipynb",
+      "source_slate_sha256": "8de2355d0f17aaf0199edb988f3bbc2b05e7fad443d348e4c2110ff8155f98ea",
+      "source_content_sha256": "4ab8437cbacf705126be9fa486d1ff7e6d6d607683ba39c551aa0b15e561da59",
+      "blocks": [
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "aadc9a9955870bea9fe509acdd7f78b4b82072dc67cd7ec3d83817bcc8c60e95",
+          "cell_id": "cell-003",
+          "presentation": "code"
+        },
+        {
+          "index": 6,
+          "language": "python",
+          "sha256": "fb99128709ee8acbca16bfeef19ec6e227aa726954cc11f517788496cc645da1",
+          "cell_id": "cell-006",
+          "presentation": "code"
+        },
+        {
+          "index": 7,
+          "language": "python",
+          "sha256": "16d3a96cb6ff5b76f39e988209b8e498ee7d43891eb440caf2517c1cbf5c233b",
+          "cell_id": "cell-007",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 1,
+          "language": "plainText",
+          "sha256": "2ee6d7cfef14f9e53f40e818fc6b940f1c6dfd5333d96081a7e6f3b3e4ac96f6",
+          "reason": "岛屿分组的文本示意，完整代码与注释已说明按整岛求和。"
+        },
+        {
+          "index": 2,
+          "language": "python",
+          "sha256": "7ef23e1ecafaa99e2fd281a39fa34ccc0ec749ab40c689346c3dff935488dc67",
+          "reason": "先保存价值再置零的局部展开，递归完整代码已逐字包含。"
+        },
+        {
+          "index": 3,
+          "language": "plainText",
+          "sha256": "4b198e047caed98aa0f8d0c07430749671a4308d7329820d9d1d76a1d55049ab",
+          "reason": "2×2 全 1 网格示意，非独立实现。"
+        },
+        {
+          "index": 4,
+          "language": "plainText",
+          "sha256": "9a520cdae13598a74f1a794efdb741a10b3970a87fd23ebc0eac1aca8ab29825",
+          "reason": "递归调用与返回顺序的文本示意，非独立实现。"
+        },
+        {
+          "index": 5,
+          "language": "python",
+          "sha256": "4844cbca6a0f54d2742ffb34954f037774b731be4e88405a131de940de3b4fdf",
+          "reason": "递归累加局部展开，递归完整代码已逐字包含。"
+        },
+        {
+          "index": 8,
+          "language": "python",
+          "sha256": "b372309f43a36abd8d666c36d0a777d4d28ffaafc7584ac06f382366115904cc",
+          "reason": "发现陆地时的局部展开，显式栈完整代码已逐字包含。"
         }
       ]
     }
