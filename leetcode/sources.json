@@ -1,9 +1,9 @@
 {
   "profile": "https://leetcode.cn/u/4bg5t/",
-  "fetched_at": "2026-10-31",
+  "fetched_at": "2026-11-08",
   "coverage": {
-    "solutions": 15,
-    "discussions": 3,
+    "solutions": 16,
+    "discussions": 4,
     "solutions_has_next_page": false,
     "discussions_next_token": null
   },
@@ -2390,6 +2390,276 @@
           "language": "python",
           "sha256": "b372309f43a36abd8d666c36d0a777d4d28ffaafc7584ac06f382366115904cc",
           "reason": "发现陆地时的局部展开，显式栈完整代码已逐字包含。"
+        }
+      ]
+    },
+    {
+      "id": "1385-liang-ge-shu-zu-jian-de-ju-chi-zhi-urupm",
+      "kind": "solution",
+      "title": "1385 两个数组间的距离值：从挨个排查，到二分定位，再到双指针",
+      "note_title": "1385. 两个数组间的距离值：暴力、二分与双指针",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/find-the-distance-value-between-two-arrays/solution/1385-liang-ge-shu-zu-jian-de-ju-chi-zhi-urupm/",
+      "notebook": "leetcode/daily_challenge/no1385.ipynb",
+      "source_slate_sha256": "86da110dfba33db2a63ea1ed5da04677b18561e2a631a333ca912a0c6dd573e9",
+      "source_content_sha256": "22a721effd64b3d72ee8c9d0f153878ee0607000f9cc0df750657b0c43c316be",
+      "blocks": [
+        {
+          "index": 1,
+          "language": "python",
+          "sha256": "fc812911a18eb1238d210fe755ee79505aabebf6f7b07ba90c1d0d0607134753",
+          "cell_id": "cell-003",
+          "presentation": "code"
+        },
+        {
+          "index": 3,
+          "language": "python",
+          "sha256": "9f9ef5077f284d1387c387b51b417d8109180177240d77ad4dbf455afa0f9c39",
+          "cell_id": "cell-006",
+          "presentation": "code"
+        },
+        {
+          "index": 4,
+          "language": "python",
+          "sha256": "7f4fab2313e638d64f7f2d5eacf798ac4c83d788537d297170e819fb4c17f7b7",
+          "cell_id": "cell-009",
+          "presentation": "code"
+        },
+        {
+          "index": 5,
+          "language": "python",
+          "sha256": "9818274570f33304549a2c52020bea1f30228d4aec4d0f5042f1a69a6d21b050",
+          "cell_id": "cell-012",
+          "presentation": "code"
+        },
+        {
+          "index": 6,
+          "language": "python",
+          "sha256": "fadc7b3d172fb16b967ced7cf5bbf5797755dd3e351879f8afeb59febabf0a88",
+          "cell_id": "cell-014",
+          "presentation": "code"
+        },
+        {
+          "index": 7,
+          "language": "javascript",
+          "sha256": "1eb17b66660a66ebe9c1e2b962edce7c39b901e26571bdb5c5881225180072e0",
+          "cell_id": "cell-016",
+          "presentation": "excerpt",
+          "fence_language": "javascript"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "9818274570f33304549a2c52020bea1f30228d4aec4d0f5042f1a69a6d21b050",
+          "reason": "开头提前展示的双指针完整代码与块 5 逐字相同；在双指针章节保留块 5。"
+        },
+        {
+          "index": 2,
+          "language": "javascript",
+          "sha256": "afd7684a56333e46d729b32be3d46b8bef0ec776558ee57d5482d610575e6238",
+          "reason": "JavaScript 函数与块 7 的函数逐字相同；保留包含原始单元命令与测试的完整块 7。"
+        }
+      ]
+    },
+    {
+      "id": "IKZnnt",
+      "kind": "discussion",
+      "title": "分享｜线段树到底存什么？用一份 Python 模板串起 4 道题",
+      "note_title": "线段树公共模板：60、4099、2916 与 4086",
+      "summary": "",
+      "url": "https://leetcode.cn/discuss/post/IKZnnt/",
+      "notebook": "leetcode/social_media_note/segment_tree_four_problems_public.ipynb",
+      "source_slate_sha256": "939ccef01f29e14d6a9986d368cd7b98b110b75c84902a309564364bf3782c57",
+      "source_content_sha256": "7b4524c7d82674bee3f96b44c0e1e32cdb6c4909cd1b68fdda11179b759e943b",
+      "blocks": [
+        {
+          "index": 3,
+          "language": "python",
+          "sha256": "5ff3d5030c6e9bcbc9f7b162bb18981e856f3b4133974f9a1064a3c674ec9232",
+          "cell_id": "cell-003",
+          "presentation": "code"
+        },
+        {
+          "index": 12,
+          "language": "python",
+          "sha256": "148a63e3e7b5db9a593903fdeab59fbf819763ecfc9720a81410f3d76011f585",
+          "cell_id": "cell-006",
+          "presentation": "code"
+        },
+        {
+          "index": 17,
+          "language": "python",
+          "sha256": "c718cd0295c6a9762a153ed7917f75494776c9761b16227da17b0e83b5889aad",
+          "cell_id": "cell-009",
+          "presentation": "code"
+        },
+        {
+          "index": 24,
+          "language": "python",
+          "sha256": "2f87ebb357431f131f8c1efdb0f9e9065f1eacafdee3a6bf0d308242b9082af1",
+          "cell_id": "cell-012",
+          "presentation": "code"
+        },
+        {
+          "index": 29,
+          "language": "python",
+          "sha256": "738eddc05fdbdf2668fefb699b5e6746157979bc33223625acae50a1565862f0",
+          "cell_id": "cell-015",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 0,
+          "language": "plainText",
+          "sha256": "e3b13427ef760f54a7e9067c210da088271cd9b0d41ca7db38218e96e2545167",
+          "reason": "树形结构示意，不是独立实现；笔记只保留公共模板和完整解法。"
+        },
+        {
+          "index": 1,
+          "language": "plainText",
+          "sha256": "45eee5a93b069addfbd0f5c4481c7ddda08ceaa0b9dff67a71af4e03dfe5d2de",
+          "reason": "tree 与 lazy 的记账示意；关键含义已合并到公共模板注释。"
+        },
+        {
+          "index": 2,
+          "language": "plainText",
+          "sha256": "0ac15bfe1b7267f00c2b3054215e2daa04321c827caa9d7f8336192103f43924",
+          "reason": "push 与 pull 的概念示意；完整方法保留在公共模板中。"
+        },
+        {
+          "index": 4,
+          "language": "plainText",
+          "sha256": "f2048316f1dfbb68cda3df76998b9133e1f41f0041694d5da26ace9dea0a86ac",
+          "reason": "剩余数字的初始状态示意，不是代码实现。"
+        },
+        {
+          "index": 5,
+          "language": "plainText",
+          "sha256": "2b042d55563d2b548f69b81aba6df1b794b87a332c5a5d72ce78815107a63afd",
+          "reason": "删除数字后的状态示意，不是代码实现。"
+        },
+        {
+          "index": 6,
+          "language": "plainText",
+          "sha256": "d28f270b087b935b08a036faace75e31dbbfee6453c003805dbe58ec83594775",
+          "reason": "阶乘分组示意；对应计算保留在第 60 题完整解法中。"
+        },
+        {
+          "index": 7,
+          "language": "plainText",
+          "sha256": "5379fadc557584af77102da02d8301c097c649d8e4e9201ddae080262e2fde8d",
+          "reason": "具体样例的 rank 算式；通用计算保留在第 60 题完整解法中。"
+        },
+        {
+          "index": 8,
+          "language": "plainText",
+          "sha256": "6bcd4eddb8201f0a9d955b1311669e5d4f987b462dfeb094cdd9019151d88caf",
+          "reason": "具体样例的 k 取余算式；通用计算保留在第 60 题完整解法中。"
+        },
+        {
+          "index": 9,
+          "language": "python",
+          "sha256": "6cd31ae0724dbf31c5990aedcd07c553e650b45e41a63eec9cfd4e12a50e4055",
+          "reason": "依赖循环上下文的局部阶乘计算，与块 12 的完整解法重复。"
+        },
+        {
+          "index": 10,
+          "language": "plainText",
+          "sha256": "e7dea1eafc9690349cffd126d9bce18cdea19cd6a417dab52cfb8ea5efb51c1a",
+          "reason": "数字、下标与可用性状态示意；含义已合并到第 60 题注释。"
+        },
+        {
+          "index": 11,
+          "language": "plainText",
+          "sha256": "f283d2f1239411f7214b442e9e3906cb256758b8e25844a72e3e96ba7c7e0a4f",
+          "reason": "选走数字后的可用性示意；更新操作保留在块 12 中。"
+        },
+        {
+          "index": 13,
+          "language": "plainText",
+          "sha256": "2a2cafabdf81724e61036a84359c798743943171937c587ea0be331a0e2d19b9",
+          "reason": "锁定位置的示例数组；判断逻辑保留在第 4099 题完整解法中。"
+        },
+        {
+          "index": 14,
+          "language": "plainText",
+          "sha256": "9b22ad2ab76f1d0eb47d5620f56615402de85900bb45aefd5ef62db82f91bf0a",
+          "reason": "允许保留锁定的条件示意；完整判断保留在块 17 中。"
+        },
+        {
+          "index": 15,
+          "language": "plainText",
+          "sha256": "487d4ea6f6874548060e749c49565d26b352d5e342db78bcfac79fb466f605d1",
+          "reason": "操作数公式示意；已合并到第 4099 题注释并保留完整实现。"
+        },
+        {
+          "index": 16,
+          "language": "python",
+          "sha256": "658b1c86a9941c4e1fc1d4ac014f1eec9dfe9ef280dba20e3f33491e92924c84",
+          "reason": "依赖上下文的单次查询，与块 17 中的查询重复。"
+        },
+        {
+          "index": 18,
+          "language": "plainText",
+          "sha256": "2b023330d199b2d3768796dd89abfd6c514fca4f2ff8d294ae369af74fac5f22",
+          "reason": "子数组不同元素数的状态示意；叶子含义已合并到第 2916 题注释。"
+        },
+        {
+          "index": 19,
+          "language": "plainText",
+          "sha256": "c73316cbf0d722c5581b7080141d0e6b82cd43ef7073dd9a9c4a19d2aed97b93",
+          "reason": "受影响区间的公式示意；完整区间计算保留在块 24 中。"
+        },
+        {
+          "index": 20,
+          "language": "plainText",
+          "sha256": "2d54f40788dff2ccc966d592910ebfd1bb90e1a98f957c435c1c655e477b2210",
+          "reason": "追加重复元素的状态变化示意；不属于独立解法。"
+        },
+        {
+          "index": 21,
+          "language": "plainText",
+          "sha256": "c85bbd70e05290a6983ab97431541cc8842def4e352af5b7e3487b63bbc15568",
+          "reason": "平方增量的代数展开；通用增量计算保留在块 24 中。"
+        },
+        {
+          "index": 22,
+          "language": "plainText",
+          "sha256": "81b47b1a211d70f432b54fb0a05ca61476b11281d2cde58536695405a409c9d0",
+          "reason": "区间平方增量公式，与块 24 的完整计算重复。"
+        },
+        {
+          "index": 23,
+          "language": "plainText",
+          "sha256": "25d2a109476b51f233992e90ff3329b5237a2ba2c5a4b077a6f5a9b05ac24ccc",
+          "reason": "处理顺序的文字示意；已合并到第 2916 题注释。"
+        },
+        {
+          "index": 25,
+          "language": "plainText",
+          "sha256": "535686f204c3bd0d3af5e97093277c654141f9b09489e8fdd7e0e892249c80e6",
+          "reason": "候选区间排序后的叶子值示意；含义已合并到第 4086 题注释。"
+        },
+        {
+          "index": 26,
+          "language": "python",
+          "sha256": "80eeb6b7675d2a4486d648c56345632b6b5bddbf5d55747b614b2e32e472300b",
+          "reason": "依赖上下文的单次查询，与块 29 中的查询重复。"
+        },
+        {
+          "index": 27,
+          "language": "plainText",
+          "sha256": "f601bf227fd041c85fde988a3ea5a553da916a333ed6b67f05b41f4f3fdb1179",
+          "reason": "目标区间合并示意；合并逻辑保留在块 29 中。"
+        },
+        {
+          "index": 28,
+          "language": "python",
+          "sha256": "cd498784bf1311ac143df4cd0317ef5951809ad998b7dc5636b1de721b499741",
+          "reason": "依赖函数和局部变量的失败分支，与块 29 中的分支重复。"
         }
       ]
     }

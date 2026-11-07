@@ -1,10 +1,10 @@
 # 力扣笔记
 
-整理自 [公开主页](https://leetcode.cn/u/4bg5t/)，最近内容同步：**2026-10-31**。
+整理自 [公开主页](https://leetcode.cn/u/4bg5t/)，最近内容同步：**2026-11-08**。
 
 原代码逐字保留，只加少量独立注释。比赛代码来自本人排行榜中的通过提交；片段与占位简短标明。
 
-## 题解（15 篇）
+## 题解（16 篇）
 
 | 笔记 | 来源 |
 | --- | --- |
@@ -23,14 +23,16 @@
 | [666. 路径总和 IV：节点编码与 DFS](daily_challenge/no666.ipynb) | [原文](https://leetcode.cn/problems/path-sum-iv/solution/666-lu-jing-zong-he-iv-de-jie-dian-bian-4l18r/) |
 | [3882. 网格图中最小异或路径：集合 DP 与滚动数组](daily_challenge/no3882.ipynb) | [原文](https://leetcode.cn/problems/minimum-xor-path-in-a-grid/solution/3882-wang-ge-tu-zhong-zui-xiao-yi-huo-lu-6pwv/) |
 | [3619. 总价值可以被 K 整除的岛屿数目：DFS](daily_challenge/no3619.ipynb) | [原文](https://leetcode.cn/problems/count-islands-with-total-value-divisible-by-k/solution/3619-zong-jie-zhi-ke-yi-bei-k-zheng-chu-kysza/) |
+| [1385. 两个数组间的距离值：暴力、二分与双指针](daily_challenge/no1385.ipynb) | [原文](https://leetcode.cn/problems/find-the-distance-value-between-two-arrays/solution/1385-liang-ge-shu-zu-jian-de-ju-chi-zhi-urupm/) |
 
-## 讨论（3 篇）
+## 讨论（4 篇）
 
 | 笔记 | 来源 |
 | --- | --- |
 | [第 523 场周赛](contests/weekly_523.ipynb) | [原文](https://leetcode.cn/discuss/post/sLnQAI/) |
 | [第 193 场双周赛](contests/biweekly_193.ipynb) | [原文](https://leetcode.cn/discuss/post/JelbXH/) |
 | [第 524 场周赛：公开文章与比赛通过代码](contests/weekly_524_public.ipynb) | [原文](https://leetcode.cn/discuss/post/lYH5ET/) |
+| [线段树公共模板：60、4099、2916 与 4086](social_media_note/segment_tree_four_problems_public.ipynb) | [原文](https://leetcode.cn/discuss/post/IKZnnt/) |
 
 ## 本地周赛复盘
 
