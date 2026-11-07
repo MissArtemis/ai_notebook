@@ -4,7 +4,7 @@
 
 原代码逐字保留，只加少量独立注释。比赛代码来自本人排行榜中的通过提交；片段与占位简短标明。
 
-## 题解（16 篇）
+## 题解（17 篇）
 
 | 笔记 | 来源 |
 | --- | --- |
@@ -24,6 +24,7 @@
 | [3882. 网格图中最小异或路径：集合 DP 与滚动数组](daily_challenge/no3882.ipynb) | [原文](https://leetcode.cn/problems/minimum-xor-path-in-a-grid/solution/3882-wang-ge-tu-zhong-zui-xiao-yi-huo-lu-6pwv/) |
 | [3619. 总价值可以被 K 整除的岛屿数目：DFS](daily_challenge/no3619.ipynb) | [原文](https://leetcode.cn/problems/count-islands-with-total-value-divisible-by-k/solution/3619-zong-jie-zhi-ke-yi-bei-k-zheng-chu-kysza/) |
 | [1385. 两个数组间的距离值：暴力、二分与双指针](daily_challenge/no1385.ipynb) | [原文](https://leetcode.cn/problems/find-the-distance-value-between-two-arrays/solution/1385-liang-ge-shu-zu-jian-de-ju-chi-zhi-urupm/) |
+| [1267. 统计参与通信的服务器：行列计数](daily_challenge/no1267.ipynb) | [原文](https://leetcode.cn/problems/count-servers-that-communicate/solution/1267-tong-ji-can-yu-tong-xin-de-fu-wu-qi-83zk/) |
 
 ## 讨论（4 篇）
 

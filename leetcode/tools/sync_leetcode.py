@@ -55,7 +55,8 @@ def compare(snapshot, manifest):
 def fetch(root, cache):
     config = load(root / 'leetcode/sync_config.json')
     manifest = load(root / 'leetcode/sources.json') if (root / 'leetcode/sources.json').exists() else {'sources': []}
-    posts = [fetch_post(post, config['user_slug']) for post in list_posts(config['user_slug'])]
+    posts = [fetch_post(post, config['user_slug']) for post in
+             list_posts(config['user_slug'], config.get('extra_solution_slugs', []))]
     previous = {identity(entry): entry for entry in manifest['sources']}
     for post in posts:
         contest_slug = previous.get(identity(post), {}).get('contest_slug')

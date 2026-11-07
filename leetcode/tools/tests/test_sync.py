@@ -240,6 +240,26 @@ class SyncTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'repeated'):
                 source.list_posts('test')
 
+    def test_direct_solution_links_supplement_profile_without_duplicates(self):
+        replies = [
+            {'solutionArticles': {'edges': [{'node': {'slug': 'listed', 'title': 'Listed'}}],
+                                  'pageInfo': {'hasNextPage': False}}},
+            {'columnsPublishedContents': {'nodes': [], 'nextToken': None}},
+        ]
+        with patch.object(source, 'graphql', side_effect=replies):
+            posts = source.list_posts('test', ['listed', 'direct', 'direct'])
+        self.assertEqual([p['id'] for p in posts], ['listed', 'direct'])
+        self.assertEqual(posts[-1]['kind'], 'solution')
+        # A configured link cannot turn an unavailable article into a valid source.
+        with patch.object(source, 'graphql', return_value={'solutionArticle': None}):
+            with self.assertRaisesRegex(ValueError, 'Unavailable solution'):
+                source.fetch_post(posts[-1], 'test')
+
+    def test_invalid_direct_solution_configuration_is_rejected(self):
+        for value in ('single-slug', ['../outside'], [None]):
+            with self.assertRaisesRegex(ValueError, 'Invalid extra solution slugs'):
+                source.list_posts('test', value)
+
 
 if __name__ == '__main__':
     unittest.main()

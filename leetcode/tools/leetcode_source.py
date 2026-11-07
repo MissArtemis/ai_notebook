@@ -81,7 +81,10 @@ def fetch_contest_submissions(contest_slug, user_slug):
             'questions': result['questions'], 'submissions': submissions}
 
 
-def list_posts(user_slug):
+def list_posts(user_slug, extra_solution_slugs=()):
+    require(isinstance(extra_solution_slugs, (list, tuple)) and all(
+        isinstance(slug, str) and re.fullmatch(r'[A-Za-z0-9_-]+', slug)
+        for slug in extra_solution_slugs), 'Invalid extra solution slugs')
     posts = []
     seen_ids = set()
     skip = 0
@@ -112,6 +115,12 @@ def list_posts(user_slug):
             break
         require(token not in seen_tokens, 'Discussion pagination repeated a token')
         seen_tokens.add(token)
+    # A public detail page can be readable before it appears on the profile.
+    # fetch_post still checks availability, author, and original content.
+    for slug in extra_solution_slugs:
+        if slug not in seen_ids:
+            posts.append({'id': slug, 'kind': 'solution'})
+            seen_ids.add(slug)
     return posts
 
 

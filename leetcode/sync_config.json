@@ -1,6 +1,9 @@
 {
   "profile": "https://leetcode.cn/u/4bg5t/",
   "user_slug": "4bg5t",
+  "extra_solution_slugs": [
+    "1267-tong-ji-can-yu-tong-xin-de-fu-wu-qi-83zk"
+  ],
   "git_remote": "origin",
   "git_remote_url": "git@github.com:MissArtemis/ai_notebook.git",
   "git_branch": "main",

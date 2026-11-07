@@ -38,14 +38,14 @@ def check_submissions(entry, cells, user_slug, online=False):
     return tracked
 
 
-def check_coverage(manifest, user_slug):
-    posts = list_posts(user_slug)
+def check_coverage(manifest, user_slug, extra_solution_slugs=()):
+    posts = list_posts(user_slug, extra_solution_slugs)
     for kind, count_key in [('solution', 'solutions'), ('discussion', 'discussions')]:
         expected = {entry['id'] for entry in manifest['sources'] if entry['kind'] == kind}
         actual = {post['id'] for post in posts if post['kind'] == kind}
         require(actual == expected, f'{kind} coverage changed: online={actual}, recorded={expected}')
         require(len(actual) == manifest['coverage'][count_key], f'{kind} count mismatch')
-    print(f'Public coverage: {len(posts)} posts; pagination exhausted')
+    print(f'Public coverage: {len(posts)} posts; pagination exhausted; configured direct links included')
     return {(post['kind'], post['id']): post for post in posts}
 
 
@@ -60,7 +60,7 @@ def main():
     root = args.repo.resolve()
     manifest = json.loads((root / 'leetcode/sources.json').read_text(encoding='utf-8'))
     config = json.loads((root / 'leetcode/sync_config.json').read_text(encoding='utf-8'))
-    posts = check_coverage(manifest, config['user_slug']) if args.online else {}
+    posts = check_coverage(manifest, config['user_slug'], config.get('extra_solution_slugs', [])) if args.online else {}
     total = 0
     submission_total = 0
     executed = 0

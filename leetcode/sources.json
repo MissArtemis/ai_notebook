@@ -2,7 +2,7 @@
   "profile": "https://leetcode.cn/u/4bg5t/",
   "fetched_at": "2026-11-08",
   "coverage": {
-    "solutions": 16,
+    "solutions": 17,
     "discussions": 4,
     "solutions_has_next_page": false,
     "discussions_next_token": null
@@ -2660,6 +2660,81 @@
           "language": "python",
           "sha256": "cd498784bf1311ac143df4cd0317ef5951809ad998b7dc5636b1de721b499741",
           "reason": "依赖函数和局部变量的失败分支，与块 29 中的分支重复。"
+        }
+      ]
+    },
+    {
+      "id": "1267-tong-ji-can-yu-tong-xin-de-fu-wu-qi-83zk",
+      "kind": "solution",
+      "title": "1267. 统计参与通信的服务器：数数同行同列有几个伙伴",
+      "note_title": "1267. 统计参与通信的服务器：行列计数",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/count-servers-that-communicate/solution/1267-tong-ji-can-yu-tong-xin-de-fu-wu-qi-83zk/",
+      "notebook": "leetcode/daily_challenge/no1267.ipynb",
+      "source_slate_sha256": "36193bd0a5d3ddd0272a6eb952e1c729397c4d4390df09035661b60543af262d",
+      "source_content_sha256": "d53698d726f62b7204fb6a7d095b0d5758d36cbcfd7437eb20df35f158312473",
+      "blocks": [
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "2b96cbbe3024c7d7e1975a99e5b1ca91d4b1cee3c95e3b302cee188844e578db",
+          "cell_id": "cell-003",
+          "presentation": "code"
+        },
+        {
+          "index": 6,
+          "language": "python",
+          "sha256": "81e1eadc12a01dc1889be45959374af83f9e3cfdcfb01e5791d5b8d187a43a9f",
+          "cell_id": "cell-005",
+          "presentation": "code"
+        },
+        {
+          "index": 1,
+          "language": "javascript",
+          "sha256": "9e743def02ba9d8f4cc9e239402c34099d631c3a1400ea3e9b26e503c89763a4",
+          "cell_id": "cell-007",
+          "presentation": "excerpt",
+          "fence_language": "javascript"
+        },
+        {
+          "index": 7,
+          "language": "javascript",
+          "sha256": "ddac9534bd6020d3aef83d67fa660883e6d3ef20e577309ac9c96f4630ee16ac",
+          "cell_id": "cell-008",
+          "presentation": "excerpt",
+          "fence_language": "javascript"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 2,
+          "language": "plainText",
+          "sha256": "c9877b9ba79939e085ff608d7012c1e54ea56fe399911edef58743b7b85dc0d5",
+          "reason": "样例矩阵的纯文本示意，与保留的 Python、JavaScript 样例输入重复。"
+        },
+        {
+          "index": 3,
+          "language": "plainText",
+          "sha256": "f38221365624bc6a6ff1d95a8c0a916a902472ece3d09fa866ab061a1ad66347",
+          "reason": "样例行列计数的中间结果；行列计数含义已合并到独立注释。"
+        },
+        {
+          "index": 4,
+          "language": "plainText",
+          "sha256": "bc7cfe4d4b3d13b448362d7a00522c65c7dd7352314766d6a5ef8b6c794cfa47",
+          "reason": "zip 展开各列的纯文本示意，不是独立解法。"
+        },
+        {
+          "index": 5,
+          "language": "plainText",
+          "sha256": "3ac9782595a659f9670883426a89219e4c61994026f295af6c4d74ad4f7135d4",
+          "reason": "JavaScript 列求和的单次手算示意，完整实现已保留。"
+        },
+        {
+          "index": 8,
+          "language": "plainText",
+          "sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+          "reason": "原文样例的输出文本 4，已在样例标题说明中保留。"
         }
       ]
     }
