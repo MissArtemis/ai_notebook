@@ -106,7 +106,7 @@ def main():
             for block in inventory:
                 require(sha256(online[block['index']]['code']) == block['sha256'], f'{path}: source inventory changed')
         for cell in notebook.cells:
-            if cell.cell_type == 'code' and cell.id not in tracked_cells:
+            if cell.cell_type == 'code' and cell.id not in tracked_cells and cell.source.strip():
                 require(cell.metadata.get('role') in {'annotation', 'example'}, f'{path}: unclassified added code')
                 if cell.metadata.role == 'annotation':
                     require(all(not line.strip() or line.lstrip().startswith('#') for line in cell.source.splitlines()),

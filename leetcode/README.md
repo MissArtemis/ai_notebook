@@ -1,10 +1,10 @@
 # 力扣笔记
 
-整理自 [公开主页](https://leetcode.cn/u/4bg5t/)，最近内容同步：**2026-11-08**。
+整理自 [公开主页](https://leetcode.cn/u/4bg5t/)，最近内容同步：**2026-11-14**。
 
 原代码逐字保留，只加少量独立注释。比赛代码来自本人排行榜中的通过提交；片段与占位简短标明。
 
-## 题解（17 篇）
+## 题解（20 篇）
 
 | 笔记 | 来源 |
 | --- | --- |
@@ -25,6 +25,9 @@
 | [3619. 总价值可以被 K 整除的岛屿数目：DFS](daily_challenge/no3619.ipynb) | [原文](https://leetcode.cn/problems/count-islands-with-total-value-divisible-by-k/solution/3619-zong-jie-zhi-ke-yi-bei-k-zheng-chu-kysza/) |
 | [1385. 两个数组间的距离值：暴力、二分与双指针](daily_challenge/no1385.ipynb) | [原文](https://leetcode.cn/problems/find-the-distance-value-between-two-arrays/solution/1385-liang-ge-shu-zu-jian-de-ju-chi-zhi-urupm/) |
 | [1267. 统计参与通信的服务器：行列计数](daily_challenge/no1267.ipynb) | [原文](https://leetcode.cn/problems/count-servers-that-communicate/solution/1267-tong-ji-can-yu-tong-xin-de-fu-wu-qi-83zk/) |
+| [3693. 爬楼梯 II：向前更新 DP](daily_challenge/no3693.ipynb) | [原文](https://leetcode.cn/problems/climbing-stairs-ii/solution/3693-pa-lou-ti-iilou-ti-kai-shi-shou-fei-32gg/) |
+| [4108. 使红色节点连通的最小代价：树形 DP](daily_challenge/no4108.ipynb) | [原文](https://leetcode.cn/problems/minimum-cost-to-make-red-nodes-connected/solution/4108-shi-hong-se-jie-dian-lian-tong-de-z-rd4d/) |
+| [1882. 使用服务器处理任务：双堆调度](daily_challenge/no1882_public.ipynb) | [原文](https://leetcode.cn/problems/process-tasks-using-servers/solution/liang-ge-dui-an-pai-fu-wu-qi-cong-heapq-2x6rk/) |
 
 ## 讨论（4 篇）
 

@@ -69,6 +69,24 @@ class SyncTests(unittest.TestCase):
         self.build()
         self.assertEqual(before, self.tracked())
 
+    def test_verifier_accepts_empty_editor_cells_but_rejects_unclassified_code(self):
+        import nbformat
+        self.build()
+        path = self.root / spec()['notebook']
+        notebook = nbformat.read(path, as_version=4)
+        notebook.cells.extend([nbformat.v4.new_code_cell(''), nbformat.v4.new_code_cell(' \n\t')])
+        nbformat.write(notebook, path)
+        before = path.read_bytes()
+        with patch.object(sys, 'argv', ['verify_notebooks.py', '--repo', str(self.root)]):
+            verifier.main()
+        self.assertEqual(before, path.read_bytes())
+
+        notebook.cells.append(nbformat.v4.new_code_cell('print("unclassified")'))
+        nbformat.write(notebook, path)
+        with patch.object(sys, 'argv', ['verify_notebooks.py', '--repo', str(self.root)]):
+            with self.assertRaisesRegex(ValueError, 'unclassified added code'):
+                verifier.main()
+
     def test_index_preserves_existing_local_contest_reviews(self):
         index = self.root / 'leetcode/README.md'
         local = '## 本地周赛复盘\n\n| 比赛 | 笔记 |\n| --- | --- |\n| 524 | [复盘](contests/local.md) |\n\n'

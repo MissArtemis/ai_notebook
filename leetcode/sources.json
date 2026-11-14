@@ -1,8 +1,8 @@
 {
   "profile": "https://leetcode.cn/u/4bg5t/",
-  "fetched_at": "2026-11-08",
+  "fetched_at": "2026-11-14",
   "coverage": {
-    "solutions": 17,
+    "solutions": 20,
     "discussions": 4,
     "solutions_has_next_page": false,
     "discussions_next_token": null
@@ -2735,6 +2735,290 @@
           "language": "plainText",
           "sha256": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
           "reason": "原文样例的输出文本 4，已在样例标题说明中保留。"
+        }
+      ]
+    },
+    {
+      "id": "3693-pa-lou-ti-iilou-ti-kai-shi-shou-fei-32gg",
+      "kind": "solution",
+      "title": "3693. 爬楼梯 II：楼梯开始收费了，跨得远还要加钱",
+      "note_title": "3693. 爬楼梯 II：向前更新 DP",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/climbing-stairs-ii/solution/3693-pa-lou-ti-iilou-ti-kai-shi-shou-fei-32gg/",
+      "notebook": "leetcode/daily_challenge/no3693.ipynb",
+      "source_slate_sha256": "2d379d54a128fe918762db784d17780bab6e668c7caf36e641a36dd811a570f6",
+      "source_content_sha256": "14d19c22e4c92e019836f125d049ad606ae1a85c118f1dcf1ad43703833cce3d",
+      "blocks": [
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "46c54e6f473da88326fa95b87168e3a53ac882cdd6baa076b048b3b3c826fa5b",
+          "cell_id": "cell-002",
+          "presentation": "code"
+        },
+        {
+          "index": 1,
+          "language": "python",
+          "sha256": "32dd6844903ed1a273f539ecb03eccbd19e0b0502ccaed1a60712dd18317b7d2",
+          "cell_id": "cell-003",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 2,
+          "language": "plainText",
+          "sha256": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8",
+          "reason": "样例输出 11；保留原样例代码，运行时直接得到结果，不另存输出。"
+        }
+      ]
+    },
+    {
+      "id": "4108-shi-hong-se-jie-dian-lian-tong-de-z-rd4d",
+      "kind": "solution",
+      "title": "4108. 使红色节点连通的最小代价：一次 DFS，先算全蓝账，再找最大节省",
+      "note_title": "4108. 使红色节点连通的最小代价：树形 DP",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/minimum-cost-to-make-red-nodes-connected/solution/4108-shi-hong-se-jie-dian-lian-tong-de-z-rd4d/",
+      "notebook": "leetcode/daily_challenge/no4108.ipynb",
+      "source_slate_sha256": "7fa7a6c10cd3dd0c3fd017a36d9f28825771dacbaec55e15dab6db62e1cdb0f3",
+      "source_content_sha256": "4edc940dab1ce559af640c62070e06c1995860ca69e05bb3f1f492e77ec3455f",
+      "blocks": [
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "84695a737b3a3735e79b1252686ca1aaea4986ee52baecd9bae28ef55a81332b",
+          "cell_id": "cell-001",
+          "presentation": "code"
+        },
+        {
+          "index": 1,
+          "language": "python",
+          "sha256": "ded5102e12698026b11c2e439bcd019e2a2fd897a68cb1824cf0760eaa4222d8",
+          "cell_id": "cell-004",
+          "presentation": "code"
+        },
+        {
+          "index": 12,
+          "language": "python",
+          "sha256": "f69ba2821d322ba2b41f93a0101933b9255e4109d8295d9246e280b2ab8fea3a",
+          "cell_id": "cell-005",
+          "presentation": "code"
+        },
+        {
+          "index": 11,
+          "language": "python",
+          "sha256": "29b1fe46d0414af3fa4912091f994c86e8ee7060ec01bb142e920f863ba6d1b0",
+          "cell_id": "cell-008",
+          "presentation": "code"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 2,
+          "language": "plainText",
+          "sha256": "8c966a14530bc96b29ae7826db4cbe52e872b21c14060265a0e8fca5e024eb95",
+          "reason": "全蓝费用的文字定义，已合并到独立注释。"
+        },
+        {
+          "index": 3,
+          "language": "plainText",
+          "sha256": "716f3ef98790058b4fb5e58f4a74a0da45f1b7f27e3a382b3d66be4fd329379d",
+          "reason": "局部收益算例，不是独立实现；最大节省的含义已简短说明。"
+        },
+        {
+          "index": 4,
+          "language": "plainText",
+          "sha256": "fb660f0a2e10b303dd21739521f1bf88f0da7715eda75bae7ff06ed6f55cacc9",
+          "reason": "父子连接示意图；只接入包含孩子节点的连通块已由状态注释表达。"
+        },
+        {
+          "index": 5,
+          "language": "plainText",
+          "sha256": "78b3acbda8da3f974819139e7df8d6d5f686dd1843fa13030e5b3e1c23df562c",
+          "reason": "与完整 DFS 中收益累加语句相同的转移公式，已保留完整代码。"
+        },
+        {
+          "index": 6,
+          "language": "plainText",
+          "sha256": "5b145d74c7319ce5e80450648dbee2d4cb72cbac5ba978da478ac48525ab98a8",
+          "reason": "七节点教学示意图；保留原文更完整的十八节点可运行样例。"
+        },
+        {
+          "index": 7,
+          "language": "plainText",
+          "sha256": "c4deb8b73e9d92ef74c032ec175e98acc98d464bc542f058bc0c12d5c22ea108",
+          "reason": "七节点示例的基准费用算式，与完整实现的计算重复。"
+        },
+        {
+          "index": 8,
+          "language": "plainText",
+          "sha256": "65593aaec91bae7b8df1213658aa36fcda8238ed98e120a088c7f8e9149a0bc0",
+          "reason": "七节点示例的中间结果，保留原文完整实现与十八节点样例即可。"
+        },
+        {
+          "index": 9,
+          "language": "plainText",
+          "sha256": "189c8cd6c47246ce696522fe9f405cbedb55152159f4e54c4ce7753a93a0bd20",
+          "reason": "解释全局最大收益的三节点示意图，不是独立实现。"
+        },
+        {
+          "index": 10,
+          "language": "plainText",
+          "sha256": "5783a099d2b6322d0d5fe768a7c429055ec40b53e401dddc68959634539502ea",
+          "reason": "三节点示例的中间收益，已由全局最大收益注释覆盖。"
+        },
+        {
+          "index": 13,
+          "language": "plainText",
+          "sha256": "e629fa6598d732768f7c726b4b621285f9c3b85303900aa912017db7617d8bdb",
+          "reason": "十八节点样例输出 15，已通过对应样例断言验证，不另存输出。"
+        },
+        {
+          "index": 14,
+          "language": "plainText",
+          "sha256": "4b0db7c9ea6f5d4a5f690b1f56fea1ac74348552df7c959b1291038be6b5400b",
+          "reason": "与原样例 edges 完全对应的十八节点树形图；保留原始输入。"
+        },
+        {
+          "index": 15,
+          "language": "plainText",
+          "sha256": "410f380f7d7b1ca04ce8033993ac8dfd08ab012814b935460d272e54e1ec7538",
+          "reason": "十八节点样例中间结果 47、32 与最终值 15；保留原代码和样例断言。"
+        }
+      ]
+    },
+    {
+      "id": "liang-ge-dui-an-pai-fu-wu-qi-cong-heapq-2x6rk",
+      "kind": "solution",
+      "title": "两个堆安排服务器：从 heapq 入门到双堆模板，时钟终于不用逐秒加班了",
+      "note_title": "1882. 使用服务器处理任务：双堆调度",
+      "summary": "",
+      "url": "https://leetcode.cn/problems/process-tasks-using-servers/solution/liang-ge-dui-an-pai-fu-wu-qi-cong-heapq-2x6rk/",
+      "notebook": "leetcode/daily_challenge/no1882_public.ipynb",
+      "source_slate_sha256": "1d9b8d803232f917a5b432bc942b988ff0ca1e93459edaa421f67fb55e980c8b",
+      "source_content_sha256": "c1061582c02f9872be7cce91cd80f777a14aa5818a951f2c8ba638cf407d941f",
+      "blocks": [
+        {
+          "index": 0,
+          "language": "python",
+          "sha256": "3dd513bd0352df774edb3e7f2f9685ad4107c5480e33b33257adf47c59c09147",
+          "cell_id": "cell-003",
+          "presentation": "code"
+        },
+        {
+          "index": 10,
+          "language": "python",
+          "sha256": "8219ea5df7737e0e574165889b502311122e76aa4d7e13f366cfe172bd127b10",
+          "cell_id": "cell-004",
+          "presentation": "code"
+        },
+        {
+          "index": 1,
+          "language": "python",
+          "sha256": "8420c6191c4264db94efb2d46739f9a35d0524296e3e71a98ff3810440dbbb11",
+          "cell_id": "cell-006",
+          "presentation": "code"
+        },
+        {
+          "index": 2,
+          "language": "python",
+          "sha256": "ee101b191c7dbb610303f3319b6544392bde352112b1696b72b60d9360f403bd",
+          "cell_id": "cell-008",
+          "presentation": "code"
+        },
+        {
+          "index": 3,
+          "language": "python",
+          "sha256": "3b146afd94aa545e07471a84b001d06e02a384d92b4e1bd85a2caa0c2901487e",
+          "cell_id": "cell-010",
+          "presentation": "code"
+        },
+        {
+          "index": 12,
+          "language": "plainText",
+          "sha256": "3a8455e8ae59981a4216de263a977360877ae5d091db5f7aa2a7a9e4a6a69dca",
+          "cell_id": "cell-012",
+          "presentation": "excerpt",
+          "fence_language": "plainText"
+        },
+        {
+          "index": 14,
+          "language": "plainText",
+          "sha256": "89cd101d2cf55a2761e438a85669324a841c0e3ee224041f487dc3025e6bd929",
+          "cell_id": "cell-013",
+          "presentation": "excerpt",
+          "fence_language": "plainText"
+        },
+        {
+          "index": 16,
+          "language": "plainText",
+          "sha256": "234e8170970ad0284b6fe703e6af4b994940eb9c076fa16767497e8d8dcbfe68",
+          "cell_id": "cell-015",
+          "presentation": "excerpt",
+          "fence_language": "plainText"
+        }
+      ],
+      "omitted_blocks": [
+        {
+          "index": 4,
+          "language": "plainText",
+          "sha256": "a9c4fdc6a440cab82ee32a4b9f252e186f5fa711c9e7273d44936095bad7b783",
+          "reason": "空闲堆元素定义，已合并到双堆独立注释。"
+        },
+        {
+          "index": 5,
+          "language": "plainText",
+          "sha256": "74b5a8571e7723a3c2ca21e97adbcb8f2803054d99869d4a20c00919e534b0f0",
+          "reason": "忙碌堆元素定义，已合并到双堆独立注释。"
+        },
+        {
+          "index": 6,
+          "language": "plainText",
+          "sha256": "85b1c6ff6ecd2ba75afd51f51436151e380f8d9450149c0501818d4485968531",
+          "reason": "时间推进的局部展开，完整实现已逐字保留。"
+        },
+        {
+          "index": 7,
+          "language": "plainText",
+          "sha256": "81fcd19819629c199a4ef8a39b41b811f7c0e4c392ad1455651ae3a475b69582",
+          "reason": "释放条件的文字展开，完整 release 函数已逐字保留。"
+        },
+        {
+          "index": 8,
+          "language": "plainText",
+          "sha256": "78e76eabf8601631267f9fc582fde74e73b16c0626439b8c911155b8a0786a8a",
+          "reason": "跳跃时钟的单行展开，完整实现与模板均已保留。"
+        },
+        {
+          "index": 9,
+          "language": "plainText",
+          "sha256": "ba6c4a4b099b342b8f4717d2a1709ad923ed68c9e47d0bf45f7a198463c7f9e3",
+          "reason": "完成时间计算的局部展开，完整实现已逐字保留。"
+        },
+        {
+          "index": 11,
+          "language": "plainText",
+          "sha256": "345faaa3a29673a7f4082dcfe7bc8b6991543a0da2be661d4d36021b88689793",
+          "reason": "原文样例输出；运行保留的原样例代码即可得到，不另存输出。"
+        },
+        {
+          "index": 13,
+          "language": "plainText",
+          "sha256": "98df18a2c2dc2d361755ab6c40b74f7bc1586d72d01e53b74c509059b3727c21",
+          "reason": "反例忙碌堆中间状态，保留反例输入和预期输出即可。"
+        },
+        {
+          "index": 15,
+          "language": "plainText",
+          "sha256": "ac122e7357b94a4cd1ff9238f1148b0e9ff1d5dafb15529011bd28d002bba70f",
+          "reason": "释放再分配的局部流程，与保留的完整调度模板重复。"
+        },
+        {
+          "index": 17,
+          "language": "plainText",
+          "sha256": "ec60a0692b6f3d804e97e014db352885e3606d77a6c5aa03645e03661e3fd027",
+          "reason": "复杂度表达式，不属于实现或独立模板，按精简笔记约定省略。"
         }
       ]
     }
